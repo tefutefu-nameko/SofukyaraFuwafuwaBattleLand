@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5224972614189990923}
   - component: {fileID: 8435100374992699795}
   m_Layer: 0
-  m_Name: Spinach Level 2
+  m_Name: Sofuken Battery
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -44,4 +44,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40f441d7dd176284987e953fdb673f5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  passiveItemData: {fileID: 11400000, guid: 3f82abbf8cdc0e141b132694e240f5f1, type: 2}
+  passiveItemData: {fileID: 11400000, guid: c8f486d4f9f4de846a4cfc14c7a4f94b, type: 2}

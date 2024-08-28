@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Kashiwamochi Weapon
   m_EditorClassIdentifier: 
   prefab: {fileID: 9076502686612672268, guid: 7952422016acf8b439cdb7d5bceba177, type: 3}
-  damage: 5
+  damage: 10
   speed: 10
   cooldownDuration: 2
   pierce: 1

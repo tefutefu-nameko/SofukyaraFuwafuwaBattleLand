@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 69371e5c5276cef46b112eda04f5a877, type: 3}
-  m_Name: Spinach Passive Item Level 2
+  m_Name: Sofuken Battery Passive Item Level 2
   m_EditorClassIdentifier: 
   multiplier: 150
   level: 2
   nextLevelPrefab: {fileID: 0}
-  name: Spinach Level2
+  name: Sofuken Battery Level2
   description: Increases Might by 150%
-  icon: {fileID: -232004596, guid: 0090d377f59c1a04db43618221a27856, type: 3}
+  icon: {fileID: 21300000, guid: af7548abfbd59224086b6e462d0fba61, type: 3}

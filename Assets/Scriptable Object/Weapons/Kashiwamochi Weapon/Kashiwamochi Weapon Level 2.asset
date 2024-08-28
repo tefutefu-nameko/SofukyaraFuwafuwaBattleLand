@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Kashiwamochi Weapon Level 2
   m_EditorClassIdentifier: 
   prefab: {fileID: 9076502686612672268, guid: 12aa9f0aac75bab49896e440d2e02126, type: 3}
-  damage: 5
+  damage: 20
   speed: 15
   cooldownDuration: 2
   pierce: 1
