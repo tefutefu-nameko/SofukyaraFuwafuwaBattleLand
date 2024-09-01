@@ -17,4 +17,4 @@ MonoBehaviour:
   nextLevelPrefab: {fileID: 4706817858981082655, guid: daf7fc151f6a0f84b98c0b6ff142703b, type: 3}
   name: Sofuken Battery
   description: Increases Might by 100%
-  icon: {fileID: 21300000, guid: af7548abfbd59224086b6e462d0fba61, type: 3}
+  icon: {fileID: 21300000, guid: df90ca0b26a6e5548927ecc9bc02915d, type: 3}

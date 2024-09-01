@@ -17,4 +17,4 @@ MonoBehaviour:
   nextLevelPrefab: {fileID: 0}
   name: Sofuken Battery Level2
   description: Increases Might by 150%
-  icon: {fileID: 21300000, guid: af7548abfbd59224086b6e462d0fba61, type: 3}
+  icon: {fileID: 21300000, guid: df90ca0b26a6e5548927ecc9bc02915d, type: 3}
