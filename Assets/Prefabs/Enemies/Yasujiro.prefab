@@ -345,9 +345,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   drops:
-  - name: BLue gem
-    itemPrefab: {fileID: 1218668208091956480, guid: 3eb121d3d7bc5d74b810b60bc443bb79, type: 3}
+  - name: Yellow green gem
+    itemPrefab: {fileID: 1218668208091956480, guid: a08ad07dfe6b4d3448bb7422665ee02e, type: 3}
     dropRate: 100
-  - name: BLue gem
-    itemPrefab: {fileID: 1218668208091956480, guid: 3eb121d3d7bc5d74b810b60bc443bb79, type: 3}
-    dropRate: 50
