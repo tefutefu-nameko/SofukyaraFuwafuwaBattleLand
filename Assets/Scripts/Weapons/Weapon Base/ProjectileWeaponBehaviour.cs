@@ -19,6 +19,8 @@ public class ProjectileWeaponBehaviour : MonoBehaviour
     protected float currentCooldownDuration;
     protected int currentPierce;
 
+    public ParticleSystem HitEffect;　//エフェクト
+
     void Awake()
     {
         currentDamage = weaponData.Damage;
@@ -90,6 +92,7 @@ public class ProjectileWeaponBehaviour : MonoBehaviour
         //Reference the script from the collided collider and deal damage using TakeDamage()
         if (col.CompareTag("Enemy"))
         {
+            Destroy(Instantiate(HitEffect, transform.position, Quaternion.identity), 5f);  //攻撃が当たるとエフェクト発生
             EnemyStats enemy = col.GetComponent<EnemyStats>();
             enemy.TakeDamage(GetCurrentDamage(), transform.position);    //Make sure to use currentDamage instead of weaponData.Damage in case any damage multipliers in the future
             ReducePierce();
