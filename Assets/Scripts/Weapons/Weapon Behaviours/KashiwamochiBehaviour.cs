@@ -5,6 +5,7 @@ using UnityEngine;
 public class KashiwamochiBehaviour : ProjectileWeaponBehaviour
 {
 
+
     protected override void Start()
     {
         base.Start();
