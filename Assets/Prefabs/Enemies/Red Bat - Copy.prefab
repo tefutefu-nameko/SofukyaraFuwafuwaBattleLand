@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: -5265960380728675040}
   - component: {fileID: -2258106125676922710}
   m_Layer: 0
-  m_Name: Red Bat
+  m_Name: Red Bat - Copy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
