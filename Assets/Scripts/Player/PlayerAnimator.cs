@@ -20,25 +20,29 @@ public class PlayerAnimator : MonoBehaviour
     {
         if (pm.moveDir.x != 0 || pm.moveDir.y != 0)
         {
-            am.SetBool("Move", true);
-
             SpriteDirectionChecker();
         }
         else
         {
-            am.SetBool("Move", false);
+            am.SetBool("MoveLeft", false);
+            am.SetBool("MoveRight", false);
         }
     }
-
     void SpriteDirectionChecker()
     {
-        if (pm.moveDir.x < 0)
+        if (pm.lastHorizontalVector < 0)
         {
-            sr.flipX = true;
+            am.SetBool("MoveLeft", true);
+            am.SetBool("MoveRight", false);
+            am.SetBool("lastHorizontalVectorIsRight", false);
         }
         else
         {
-            sr.flipX = false;
+            am.SetBool("MoveRight", true);
+            am.SetBool("MoveLeft", false);
+            am.SetBool("lastHorizontalVectorIsRight", true);
         }
     }
+
+
 }
