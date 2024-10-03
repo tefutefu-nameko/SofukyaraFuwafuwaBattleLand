@@ -997,15 +997,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\u8A2D\u5B9A"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8187ac4e25a927a47a19e1e3d434f59d, type: 2}
-  m_sharedMaterial: {fileID: 4074993559295177138, guid: 8187ac4e25a927a47a19e1e3d434f59d, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 90513d77f7e6d954f817852412dde78b, type: 2}
+  m_sharedMaterial: {fileID: -9074705051426609330, guid: 90513d77f7e6d954f817852412dde78b, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1028,7 +1028,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 1
+  m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -1227,7 +1227,7 @@ GameObject:
   - component: {fileID: 882075465}
   - component: {fileID: 882075464}
   m_Layer: 5
-  m_Name: Start
+  m_Name: Start Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2053,15 +2053,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\u30AF\u30EC\u30B8\u30C3\u30C8"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8187ac4e25a927a47a19e1e3d434f59d, type: 2}
-  m_sharedMaterial: {fileID: 4074993559295177138, guid: 8187ac4e25a927a47a19e1e3d434f59d, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 90513d77f7e6d954f817852412dde78b, type: 2}
+  m_sharedMaterial: {fileID: -9074705051426609330, guid: 90513d77f7e6d954f817852412dde78b, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -2084,7 +2084,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 1
+  m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -3003,15 +3003,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\u30E9\u30F3\u30AD\u30F3\u30B0"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8187ac4e25a927a47a19e1e3d434f59d, type: 2}
-  m_sharedMaterial: {fileID: 4074993559295177138, guid: 8187ac4e25a927a47a19e1e3d434f59d, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 90513d77f7e6d954f817852412dde78b, type: 2}
+  m_sharedMaterial: {fileID: -9074705051426609330, guid: 90513d77f7e6d954f817852412dde78b, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -3034,7 +3034,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 1
+  m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -3214,15 +3214,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\u30DE\u30CB\u30E5\u30A2\u30EB"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8187ac4e25a927a47a19e1e3d434f59d, type: 2}
-  m_sharedMaterial: {fileID: 4074993559295177138, guid: 8187ac4e25a927a47a19e1e3d434f59d, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 90513d77f7e6d954f817852412dde78b, type: 2}
+  m_sharedMaterial: {fileID: -9074705051426609330, guid: 90513d77f7e6d954f817852412dde78b, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -3245,7 +3245,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 1
+  m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -3349,8 +3349,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\u30D7\u30EC\u30A4"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8187ac4e25a927a47a19e1e3d434f59d, type: 2}
-  m_sharedMaterial: {fileID: 4074993559295177138, guid: 8187ac4e25a927a47a19e1e3d434f59d, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 90513d77f7e6d954f817852412dde78b, type: 2}
+  m_sharedMaterial: {fileID: -9074705051426609330, guid: 90513d77f7e6d954f817852412dde78b, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3380,7 +3380,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 1
+  m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -3598,15 +3598,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\u30B2\u30FC\u30E0\u7D42\u4E86"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8187ac4e25a927a47a19e1e3d434f59d, type: 2}
-  m_sharedMaterial: {fileID: 4074993559295177138, guid: 8187ac4e25a927a47a19e1e3d434f59d, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 90513d77f7e6d954f817852412dde78b, type: 2}
+  m_sharedMaterial: {fileID: -9074705051426609330, guid: 90513d77f7e6d954f817852412dde78b, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -3629,7 +3629,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 1
+  m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
