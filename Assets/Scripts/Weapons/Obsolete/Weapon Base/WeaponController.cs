@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[System.Obsolete("This will be replaced by the WeaponData class")]
+
 /// <summary>
 /// Base script for all weapon controllers
 /// </summary>

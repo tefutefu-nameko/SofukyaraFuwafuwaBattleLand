@@ -4,7 +4,6 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
@@ -146,17 +145,16 @@ public class GameManager : MonoBehaviour
         float yOffset = 0;
         while (t < duration)
         {
+            // Wait for a frame and update the time.
+            yield return w;
+            t += Time.deltaTime;
+
             // Fade the text to the right alpha value.
             tmPro.color = new Color(tmPro.color.r, tmPro.color.g, tmPro.color.b, 1 - t / duration);
 
             // Pan the text upwards.
             yOffset += speed * Time.deltaTime;
             rect.position = referenceCamera.WorldToScreenPoint(target.position + new Vector3(0, yOffset));
-
-            // Wait for a frame and update the time.
-            yield return w;
-            t += Time.deltaTime;
-
         }
     }
 
@@ -238,7 +236,7 @@ public class GameManager : MonoBehaviour
         resultsScreen.SetActive(true);
     }
 
-    public void AssignChosenCharacterUI(CharacterScriptableObject chosenCharacterData)
+    public void AssignChosenCharacterUI(CharacterData chosenCharacterData)
     {
         chosenCharacterImage.sprite = chosenCharacterData.Icon;
         chosenCharacterName.text = chosenCharacterData.Name;

@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[System.Obsolete("This will be replaced by the WeaponData class")]
+
 public class GarlicBehaviour : MeleeWeaponBehaviour
 {
     List<GameObject> markedEnemies;

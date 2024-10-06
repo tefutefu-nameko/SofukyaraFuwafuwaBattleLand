@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[System.Obsolete("This will be replaced by the WeaponData class")]
+
 /// <summary>
 /// Base script of all projectile behaviours [To be placed on a prefab of a weapon that is a projectile]
 /// </summary>
