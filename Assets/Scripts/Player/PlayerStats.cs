@@ -206,6 +206,7 @@ public class PlayerStats : MonoBehaviour
     public Image expBar;
     public TMP_Text levelText;
 
+    PlayerAnimator playerAnimator;
 
     void Awake()
     {
@@ -219,6 +220,10 @@ public class PlayerStats : MonoBehaviour
         baseStats = actualStats = characterData.stats;
         health = actualStats.maxHealth;
 
+        // 講座のスクリプト間違ってるけど正解はこれのはず
+        playerAnimator = GetComponent<PlayerAnimator>();
+        if (characterData.animator)
+            playerAnimator.SetAnimator(characterData.animator);
         
     }
 

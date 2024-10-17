@@ -44,5 +44,10 @@ public class PlayerAnimator : MonoBehaviour
         }
     }
 
+    public void SetAnimator(RuntimeAnimatorController c)
+    {
+        if (!am) am = GetComponent<Animator>();
+        am.runtimeAnimatorController = c;
+    }
 
 }
