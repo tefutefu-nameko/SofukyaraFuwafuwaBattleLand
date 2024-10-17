@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 999455d4b35e126478f7cb27e1a2bf29, type: 3}
+  m_Name: Sofuken Battery
+  m_EditorClassIdentifier: 
+  icon: {fileID: 21300000, guid: df90ca0b26a6e5548927ecc9bc02915d, type: 3}
+  maxLevel: 2
+  evolutionData: []
+  baseStats:
+    name: Sofuken Battery
+    description: Makes you like Popeye.
+    boosts:
+      maxHealth: 0
+      recovery: 0
+      moveSpeed: 0
+      might: 0.1
+      speed: 0
+      magnet: 0
+  growth:
+  - name: Level 2
+    description: Gives more muscle.
+    boosts:
+      maxHealth: 0
+      recovery: 0
+      moveSpeed: 0
+      might: 0.1
+      speed: 0
+      magnet: 0
