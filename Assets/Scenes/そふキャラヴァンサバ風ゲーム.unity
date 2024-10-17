@@ -8962,7 +8962,7 @@ GameObject:
   - component: {fileID: 1842435942}
   - component: {fileID: 1842435941}
   - component: {fileID: 1842435943}
-  - component: {fileID: 1842435944}
+  - component: {fileID: 1842435945}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -9172,6 +9172,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffdd75367ba6e6641b5aa0ee2bb521e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  baseStats:
+    maxHealth: 0
+    recovery: 0
+    moveSpeed: 0
+    might: 0
+    speed: 0
+    magnet: 0
+  actualStats:
+    maxHealth: 0
+    recovery: 0
+    moveSpeed: 0
+    might: 0
+    speed: 0
+    magnet: 0
   damageEffect: {fileID: 3356292695973482042, guid: 4dc463a87f7dca241bf0d60d75105afd, type: 3}
   experience: 0
   level: 1
@@ -9189,7 +9203,7 @@ MonoBehaviour:
   healthBar: {fileID: 1886643361}
   expBar: {fileID: 91269770}
   levelText: {fileID: 348476530}
---- !u!114 &1842435944
+--- !u!114 &1842435945
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9198,53 +9212,42 @@ MonoBehaviour:
   m_GameObject: {fileID: 1842435935}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7380f14cb1b043a49b3ca9729062f39b, type: 3}
+  m_Script: {fileID: 11500000, guid: 04f4f53c58e911d43aa6aacbcbe8184e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   weaponSlots:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  weaponLevels: 000000000000000000000000000000000000000000000000
-  weaponUISlots:
-  - {fileID: 424687409}
-  - {fileID: 1023536599}
-  - {fileID: 1549923494}
-  - {fileID: 1017887361}
-  - {fileID: 364259428}
-  - {fileID: 916120432}
-  passiveItemSlots:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  passiveItemLevels: 000000000000000000000000000000000000000000000000
-  passiveItemUISlots:
-  - {fileID: 2096339775}
-  - {fileID: 726686865}
-  - {fileID: 1516186143}
-  - {fileID: 1992793243}
-  - {fileID: 1304643312}
-  - {fileID: 1474609996}
-  weaponUpgradeOptions:
-  - weaponUpgradeIndex: 0
-    initialWeapon: {fileID: 4783379628986082820, guid: 0c1d60ef49a6b6245b375ef8206f1b2f, type: 3}
-    weaponData: {fileID: 11400000, guid: a0a8c1e6ed683a14cb5592b517561252, type: 2}
-  - weaponUpgradeIndex: 1
-    initialWeapon: {fileID: 5533498764444211206, guid: b9cac3fced51aae4ba4e2c566e15655b, type: 3}
-    weaponData: {fileID: 11400000, guid: 78e2e69f7d278f041b4b21b37e58ccea, type: 2}
-  passiveItemUpgradeOptions:
-  - passiveItemUpgradeIndex: 0
-    initialPassiveItem: {fileID: 6856201153184300394, guid: 44893f85480e1f3449dd808d32108cdc, type: 3}
-    passiveItemData: {fileID: 11400000, guid: 0eeab30c783126344ba2e4e1db6b7d6d, type: 2}
-  - passiveItemUpgradeIndex: 1
-    initialPassiveItem: {fileID: 4706817858981082655, guid: 235cddc26b4f5104f919ebb46b7cb8d2, type: 3}
-    passiveItemData: {fileID: 11400000, guid: c8f486d4f9f4de846a4cfc14c7a4f94b, type: 2}
+  - item: {fileID: 0}
+    image: {fileID: 424687409}
+  - item: {fileID: 0}
+    image: {fileID: 1023536599}
+  - item: {fileID: 0}
+    image: {fileID: 1549923494}
+  - item: {fileID: 0}
+    image: {fileID: 1017887361}
+  - item: {fileID: 0}
+    image: {fileID: 364259428}
+  - item: {fileID: 0}
+    image: {fileID: 916120432}
+  passiveSlots:
+  - item: {fileID: 0}
+    image: {fileID: 2096339775}
+  - item: {fileID: 0}
+    image: {fileID: 726686865}
+  - item: {fileID: 0}
+    image: {fileID: 1516186143}
+  - item: {fileID: 0}
+    image: {fileID: 1992793243}
+  - item: {fileID: 0}
+    image: {fileID: 1304643312}
+  - item: {fileID: 0}
+    image: {fileID: 1474609996}
+  availableWeapons:
+  - {fileID: 11400000, guid: ea9dff3d56046de44944672e3dd6ea69, type: 2}
+  - {fileID: 11400000, guid: 7f05e472731195146abfebf8f3d06c19, type: 2}
+  availablePassives:
+  - {fileID: 11400000, guid: 38286b6815cb8204eb06a7447512f40f, type: 2}
+  - {fileID: 11400000, guid: ccad914ae7bfeb44499ae47b02e91181, type: 2}
+  - {fileID: 11400000, guid: 5c335c66d007692458b500fd60f3c1e6, type: 2}
   upgradeUIOptions:
   - upgradeNameDisplay: {fileID: 361668638}
     upgradeDescriptionDisplay: {fileID: 1317576714}
@@ -9262,8 +9265,6 @@ MonoBehaviour:
     upgradeDescriptionDisplay: {fileID: 1087822300}
     upgradeIcon: {fileID: 1342244959}
     upgradeButton: {fileID: 303675407}
-  weaponEvolutions:
-  - {fileID: 11400000, guid: 08a862d97f2c83d43a1d1c929e853307, type: 2}
 --- !u!1 &1856949974
 GameObject:
   m_ObjectHideFlags: 0
