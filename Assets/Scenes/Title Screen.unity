@@ -413,6 +413,7 @@ GameObject:
   - component: {fileID: 248289382}
   - component: {fileID: 248289384}
   - component: {fileID: 248289383}
+  - component: {fileID: 248289385}
   m_Layer: 5
   m_Name: BackGround
   m_TagString: Untagged
@@ -437,8 +438,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -2.7702}
-  m_SizeDelta: {x: 1024, y: 570.4596}
+  m_AnchoredPosition: {x: 0, y: 0.000033379}
+  m_SizeDelta: {x: 1046, y: 588}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &248289383
 MonoBehaviour:
@@ -452,7 +453,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 2100000, guid: 91c1d7fdb0b095b41b476eb4d3b77af6, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
@@ -478,6 +479,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 248289381}
   m_CullTransparentMesh: 1
+--- !u!114 &248289385
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 248289381}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b7987693ddd6b04ab87f39f8f5918a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_offsetSpeed: {x: 0.1, y: 0}
 --- !u!1 &374305873
 GameObject:
   m_ObjectHideFlags: 0
