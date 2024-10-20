@@ -10586,9 +10586,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3308842968562633994, guid: f1b20e48199282047a0dd33974a17877, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8016372728438978365, guid: f1b20e48199282047a0dd33974a17877, type: 3}
       propertyPath: m_Name
       value: Treasure Chests
+      objectReference: {fileID: 0}
+    - target: {fileID: 8016372728438978365, guid: f1b20e48199282047a0dd33974a17877, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8726472194548753081, guid: f1b20e48199282047a0dd33974a17877, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
