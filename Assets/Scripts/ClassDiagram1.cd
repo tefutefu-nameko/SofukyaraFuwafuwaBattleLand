@@ -1,0 +1,407 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="BreakableProps" Collapsed="true">
+    <Position X="16" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAg=</HashCode>
+      <FileName>Assets\Scripts\BreakableProps.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CharacterSelector" Collapsed="true">
+    <Position X="23" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAAAEAAAAAAAAAAAAAAAAABCIAAAAAAAAAAAAEA=</HashCode>
+      <FileName>Assets\Scripts\CharacterSelector.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DropRateManager" Collapsed="true">
+    <Position X="16" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABCAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\DropRateManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EnemyMovement" Collapsed="true">
+    <Position X="17.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAACAACCAAAABAAAAAAAAAAAAAAAABAAAAAAAAAAI=</HashCode>
+      <FileName>Assets\Scripts\Enemy\EnemyMovement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EnemyScriptableObject" Collapsed="true">
+    <Position X="19.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACIEAAAiBAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Enemy\EnemyScriptableObject.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EnemySpawner" Collapsed="true">
+    <Position X="21.25" Y="1.5" Width="1.5" />
+    <NestedTypes>
+      <Class Name="EnemySpawner.Wave" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Assets\Scripts\Enemy\EnemySpawner.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="EnemySpawner.EnemyGroup" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Assets\Scripts\Enemy\EnemySpawner.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>gAQAAAFAACAAAAAAAAAAAAAAAAAEAABBACFAAAAEEAg=</HashCode>
+      <FileName>Assets\Scripts\Enemy\EnemySpawner.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EnemyStats" Collapsed="true">
+    <Position X="23" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AYRBBAAAAHAEAAACAAAAAQQAAAAEAgAFAAAAwAAAAEE=</HashCode>
+      <FileName>Assets\Scripts\Enemy\EnemyStats.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameManager" Collapsed="true">
+    <Position X="14.25" Y="2.5" Width="1.5" />
+    <NestedTypes>
+      <Enum Name="GameManager.GameState" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Assets\Scripts\GameManager.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>BIRglEgEECAAJQASMgABkgCAuABIAAAEAjQACAAAAE8=</HashCode>
+      <FileName>Assets\Scripts\GameManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ChunkTrigger" Collapsed="true">
+    <Position X="14.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABACAACBgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Map\ChunkTrigger.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MapController" Collapsed="true">
+    <Position X="17.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QCQAAAAIACgAgQIAAAAAAAAIAgAAAAABQgAAAgAAgoI=</HashCode>
+      <FileName>Assets\Scripts\Map\MapController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PropRandomizer" Collapsed="true">
+    <Position X="19.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAACAAAAAAEAAAQAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Map\PropRandomizer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Item" Collapsed="true">
+    <Position X="3" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEBMAAAgRAAAAAAAAAAAAAAAAACDAAAQAIAAAA=</HashCode>
+      <FileName>Assets\Scripts\Passive Items\Item.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ItemData" Collapsed="true">
+    <Position X="10.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAQAAQAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Passive Items\ItemData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Passive" Collapsed="true">
+    <Position X="5.25" Y="2" Width="1.5" />
+    <NestedTypes>
+      <Struct Name="Passive.Modifier" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Assets\Scripts\Passive Items\Passive.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Struct>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAAAAQEAAAAAAAAAAAAAAAAAAAAQAEAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Passive Items\Passive.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PassiveData" Collapsed="true">
+    <Position X="11.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEACAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Passive Items\PassiveData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PassiveItem" Collapsed="true">
+    <Position X="1.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAAAABAAAAAAABAAA=</HashCode>
+      <FileName>Assets\Scripts\Passive Items\PassiveItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PassiveItemScriptableObject" Collapsed="true">
+    <Position X="19.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAgAAAAIEAAAAZAAAEEAAABAQAAAAEAAAA=</HashCode>
+      <FileName>Assets\Scripts\Passive Items\PassiveItemScriptableObject.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SofukenBatteryPassiveItem" Collapsed="true">
+    <Position X="0.5" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAA=</HashCode>
+      <FileName>Assets\Scripts\Passive Items\SofukenBatteryPassiveItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WingsPassiveItem" Collapsed="true">
+    <Position X="2.75" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAA=</HashCode>
+      <FileName>Assets\Scripts\Passive Items\WingsPassiveItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BobbingAnimation" Collapsed="true">
+    <Position X="14.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEQAAAAAACAAIAAAIAAAAAAAAAAAAACAAQAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Pick-ups\BobbingAnimation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ExperienceGem" Collapsed="true">
+    <Position X="5.5" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Pick-ups\ExperienceGem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HealthPotion" Collapsed="true">
+    <Position X="7.75" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAgAAAAAAAAIAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Pick-ups\HealthPotion.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pickup" Collapsed="true">
+    <Position X="6.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAgAAAAAAAAAQAEAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Pick-ups\Pickup.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="TreasureChest" Collapsed="true">
+    <Position X="23" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Pick-ups\TreasureChest.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CameraMovement" Collapsed="true">
+    <Position X="17.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AASAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Player\CameraMovement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CharacterData" Collapsed="true">
+    <Position X="19.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAIQAAACAAAAAAAAAAQAAAAEAAAAAQAAAAEAAAA=</HashCode>
+      <FileName>Assets\Scripts\Player\CharacterData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CharacterScriptableObject" Collapsed="true">
+    <Position X="21.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIIEAACCDAAAAggAAQAAAEEAAABAQAAAAEAAAA=</HashCode>
+      <FileName>Assets\Scripts\Player\Obsolete\CharacterScriptableObject.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InventoryManager" Collapsed="true">
+    <Position X="16" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgBACAACAAgyEBAAAgBAEAgABAiAABEAAAAQAEAAA=</HashCode>
+      <FileName>Assets\Scripts\Player\Obsolete\InventoryManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlayerAnimator" Collapsed="true">
+    <Position X="21.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAIABAAAAAABAAAAAAAAgAAAAAAAAABAAA=</HashCode>
+      <FileName>Assets\Scripts\Player\PlayerAnimator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlayerCollector" Collapsed="true">
+    <Position X="23" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAAAAAAAAAAAAAAAEAAAAABQAAAABAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Player\PlayerCollector.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlayerInventory" Collapsed="true">
+    <Position X="14.25" Y="3.5" Width="1.5" />
+    <NestedTypes>
+      <Class Name="PlayerInventory.Slot" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Assets\Scripts\Player\PlayerInventory.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="PlayerInventory.UpgradeUI" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Assets\Scripts\Player\PlayerInventory.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>BAIAAACAACACAQFBAAAiBAAAAABACAABEAAAAAAFAAA=</HashCode>
+      <FileName>Assets\Scripts\Player\PlayerInventory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlayerMovement" Collapsed="true">
+    <Position X="16" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAQAEAAAAqAAAAAEAAAAAAAAAgIAAAABAAAAAAAAAAI=</HashCode>
+      <FileName>Assets\Scripts\Player\PlayerMovement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlayerStats" Collapsed="true">
+    <Position X="17.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAREAAAAAGAACBgCQEEsAAyDABEGZALSIBBAgAKYAEg=</HashCode>
+      <FileName>Assets\Scripts\Player\PlayerStats.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SceneController" Collapsed="true">
+    <Position X="21.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\SceneController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AuraWeapon" Collapsed="true">
+    <Position X="0.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAIAAAABAAAAAAAAAAAAAAAAAAAAAAACIAAAA=</HashCode>
+      <FileName>Assets\Scripts\Weapons\AuraWeapon.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MeleeWeaponBehaviour" Collapsed="true">
+    <Position X="8.5" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAQACAAAAAAAAAAAAAAAEEAIBAAACAAAAAAAEE=</HashCode>
+      <FileName>Assets\Scripts\Weapons\Obsolete\Weapon Base\MeleeWeaponBehaviour.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProjectileWeaponBehaviour" Collapsed="true">
+    <Position X="5.5" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAQACQAIAAAAAAAAAAAAEEAYBAAACAAAAAAAEE=</HashCode>
+      <FileName>Assets\Scripts\Weapons\Obsolete\Weapon Base\ProjectileWeaponBehaviour.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WeaponController" Collapsed="true">
+    <Position X="6.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAKAIAAAAAAAAAAAAAIAAIAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Weapons\Obsolete\Weapon Base\WeaponController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GarlicBehaviour" Collapsed="true">
+    <Position X="8.5" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAQAA=</HashCode>
+      <FileName>Assets\Scripts\Weapons\Obsolete\Weapon Behaviours\GalicBehaviour.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KashiwamochiBehaviour" Collapsed="true">
+    <Position X="5.5" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Weapons\Obsolete\Weapon Behaviours\KashiwamochiBehaviour.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GarlicController" Collapsed="true">
+    <Position X="5.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Weapons\Obsolete\Weapon Controllers\GarlicController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KashiwamochiController" Collapsed="true">
+    <Position X="7.75" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Weapons\Obsolete\Weapon Controllers\KashiwamochiController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WeaponEvolutionBlueprint" Collapsed="true">
+    <Position X="14.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAACCAAAAAAAAAABAAAAQAAA=</HashCode>
+      <FileName>Assets\Scripts\Weapons\Obsolete\WeaponEvolutionBlueprint.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WeaponScriptableObject" Collapsed="true">
+    <Position X="16" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAKAAAAggAAAIkAAAAZBAAMEAQADAQAAAAFAAAA=</HashCode>
+      <FileName>Assets\Scripts\Weapons\Obsolete\WeaponScriptableObject.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Aura" Collapsed="true">
+    <Position X="0.5" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAACEAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAQAAAA=</HashCode>
+      <FileName>Assets\Scripts\Weapons\Weapon Effects\Aura.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Projectile" Collapsed="true">
+    <Position X="2.75" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAQBiAAAAAEAAAAAAAAAkAAAAAAAABAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Weapons\Weapon Effects\Projectile.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProjectileWeapon" Collapsed="true">
+    <Position X="3" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAwAAAIAAAAAAAIAAAAAAAAIAAAAAAAAAAAAAEAAA=</HashCode>
+      <FileName>Assets\Scripts\Weapons\Weapon Effects\ProjectileWeapon.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WeaponEffect" Collapsed="true">
+    <Position X="1.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAgAgAAAAAAAAAAACAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Weapons\Weapon Effects\WeaponEffect.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Weapon" Collapsed="true">
+    <Position X="1.75" Y="2" Width="1.5" />
+    <NestedTypes>
+      <Struct Name="Weapon.Stats" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Assets\Scripts\Weapons\Weapon.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Struct>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAIKgEAQAAIAAAAAAAAIAAAAAAAAAQAAABAEA=</HashCode>
+      <FileName>Assets\Scripts\Weapons\Weapon.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WeaponData" Collapsed="true">
+    <Position X="9.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEASAAAAAAAAAAAAAAABAACAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Weapons\WeaponData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="ICollectible" Collapsed="true">
+    <Position X="14.25" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Interfaces\ICollectible.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Yu Gothic UI" Size="9" />
+</ClassDiagram>
