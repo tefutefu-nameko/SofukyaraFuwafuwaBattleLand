@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a607af73fb0c42c4c845f92a36d44c94, type: 3}
+  m_Name: Whip
+  m_EditorClassIdentifier: 
+  icon: {fileID: -2024901873, guid: 0090d377f59c1a04db43618221a27856, type: 3}
+  maxLevel: 3
+  evolutionData: []
+  behaviour: WhipWeapon
+  baseStats:
+    name: Whip
+    description: 
+    projectilePrefab: {fileID: 7195811838339357492, guid: 2b9a6d837dc9e5c4b96a803fe5fe3754, type: 3}
+    auraPrefab: {fileID: 0}
+    hitEffect: {fileID: 0}
+    spawnVariance:
+      serializedVersion: 2
+      x: 1.1
+      y: 0
+      width: 0
+      height: 0
+    lifespan: 0.2
+    damage: 10
+    damageVariance: 2
+    area: 1
+    speed: 0
+    cooldown: 1.35
+    projectileInterval: 0.1
+    knockback: 0
+    number: 0
+    piercing: 0
+    maxInstances: 0
+  linearGrowth: []
+  randomGrowth: []
