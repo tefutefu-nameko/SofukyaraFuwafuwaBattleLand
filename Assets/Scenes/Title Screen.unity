@@ -268,6 +268,7 @@ GameObject:
   - component: {fileID: 64815138}
   - component: {fileID: 64815140}
   - component: {fileID: 64815139}
+  - component: {fileID: 64815141}
   m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
@@ -333,6 +334,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 64815137}
   m_CullTransparentMesh: 1
+--- !u!114 &64815141
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 64815137}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a7170dbb7465ac448838c6acc1f3982, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  frequency: 1
+  magnitude: 1
+  direction: {x: 0.1, y: 0.3, z: 0}
 --- !u!1 &99127315
 GameObject:
   m_ObjectHideFlags: 0
@@ -755,6 +771,7 @@ GameObject:
   - component: {fileID: 392273653}
   - component: {fileID: 392273655}
   - component: {fileID: 392273654}
+  - component: {fileID: 392273656}
   m_Layer: 5
   m_Name: Title
   m_TagString: Untagged
@@ -820,6 +837,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 392273652}
   m_CullTransparentMesh: 1
+--- !u!114 &392273656
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 392273652}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a7170dbb7465ac448838c6acc1f3982, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  frequency: 1
+  magnitude: 1
+  direction: {x: 0, y: 0.2, z: 0}
 --- !u!1 &450609117
 GameObject:
   m_ObjectHideFlags: 0
@@ -2918,6 +2950,7 @@ GameObject:
   - component: {fileID: 1523135238}
   - component: {fileID: 1523135240}
   - component: {fileID: 1523135239}
+  - component: {fileID: 1523135241}
   m_Layer: 5
   m_Name: Image (1)
   m_TagString: Untagged
@@ -2983,6 +3016,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1523135237}
   m_CullTransparentMesh: 1
+--- !u!114 &1523135241
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1523135237}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a7170dbb7465ac448838c6acc1f3982, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  frequency: 1
+  magnitude: 1
+  direction: {x: 0.1, y: 0.3, z: 0}
 --- !u!1 &1531468452
 GameObject:
   m_ObjectHideFlags: 0
@@ -3129,6 +3177,7 @@ GameObject:
   - component: {fileID: 1538244300}
   - component: {fileID: 1538244302}
   - component: {fileID: 1538244301}
+  - component: {fileID: 1538244303}
   m_Layer: 5
   m_Name: Image (3)
   m_TagString: Untagged
@@ -3194,6 +3243,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1538244299}
   m_CullTransparentMesh: 1
+--- !u!114 &1538244303
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1538244299}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a7170dbb7465ac448838c6acc1f3982, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  frequency: 1
+  magnitude: 1
+  direction: {x: 0.1, y: 0.3, z: 0}
 --- !u!1 &1632063073
 GameObject:
   m_ObjectHideFlags: 0
@@ -3626,6 +3690,7 @@ GameObject:
   - component: {fileID: 1880488652}
   - component: {fileID: 1880488654}
   - component: {fileID: 1880488653}
+  - component: {fileID: 1880488655}
   m_Layer: 5
   m_Name: Image (2)
   m_TagString: Untagged
@@ -3691,6 +3756,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1880488651}
   m_CullTransparentMesh: 1
+--- !u!114 &1880488655
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1880488651}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a7170dbb7465ac448838c6acc1f3982, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  frequency: 1
+  magnitude: 1
+  direction: {x: 0.1, y: 0.3, z: 0}
 --- !u!1 &1944020731
 GameObject:
   m_ObjectHideFlags: 0
