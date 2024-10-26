@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a607af73fb0c42c4c845f92a36d44c94, type: 3}
+  m_Name: Axe
+  m_EditorClassIdentifier: 
+  icon: {fileID: 856039954, guid: 0090d377f59c1a04db43618221a27856, type: 3}
+  maxLevel: 3
+  evolutionData: []
+  behaviour: AxeWeapon
+  baseStats:
+    name: Axe
+    description: High damage, high Area scaling.
+    projectilePrefab: {fileID: 4453084077871648177, guid: 1118cfa01d1b49e44ab7ebf6a02cd926, type: 3}
+    auraPrefab: {fileID: 0}
+    hitEffect: {fileID: 0}
+    spawnVariance:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    lifespan: 5
+    damage: 20
+    damageVariance: 0
+    area: 1
+    speed: 5
+    cooldown: 4
+    projectileInterval: 0.2
+    knockback: 1
+    number: 3
+    piercing: 3
+    maxInstances: 70
+  linearGrowth: []
+  randomGrowth: []

@@ -10,27 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a607af73fb0c42c4c845f92a36d44c94, type: 3}
-  m_Name: Garlic
+  m_Name: Soul Eater
   m_EditorClassIdentifier: 
-  icon: {fileID: 21300000, guid: 3fbfa4f7168e3c54faa5044d26af95de, type: 3}
-  maxLevel: 3
-  evolutionData:
-  - name: Soul Eater
-    condition: 0
-    consumes: 2
-    evolutionLevel: 1
-    catalysts:
-    - itemType: {fileID: 11400000, guid: 5c335c66d007692458b500fd60f3c1e6, type: 2}
-      level: 1
-    outcome:
-      itemType: {fileID: 11400000, guid: 7b6b40853f30e53458d9f781fbf04136, type: 2}
-      level: 1
+  icon: {fileID: 1884800638, guid: 0090d377f59c1a04db43618221a27856, type: 3}
+  maxLevel: 1
+  evolutionData: []
   behaviour: AuraWeapon
   baseStats:
-    name: Garlic
-    description: Damages nearby enemies. Reduces registance to knockback
+    name: Soul Eater
+    description: 
     projectilePrefab: {fileID: 0}
-    auraPrefab: {fileID: 213001557278386314, guid: 64fc2d3393aab3b489da5efa40339d47, type: 3}
+    auraPrefab: {fileID: -4999621459740244065, guid: c6f21d5acaa98c540b9d6093d50a1da8, type: 3}
     hitEffect: {fileID: 0}
     spawnVariance:
       serializedVersion: 2
@@ -39,11 +29,11 @@ MonoBehaviour:
       width: 0
       height: 0
     lifespan: 0
-    damage: 5
+    damage: 25
     damageVariance: 1
-    area: 1
+    area: 6
     speed: 0
-    cooldown: 1.3
+    cooldown: 1
     projectileInterval: 0
     knockback: 1
     number: 1
