@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a607af73fb0c42c4c845f92a36d44c94, type: 3}
-  m_Name: Whip
+  m_Name: Slash
   m_EditorClassIdentifier: 
-  icon: {fileID: -2024901873, guid: 0090d377f59c1a04db43618221a27856, type: 3}
+  icon: {fileID: 2031297471, guid: 0090d377f59c1a04db43618221a27856, type: 3}
   maxLevel: 3
   evolutionData: []
   behaviour: WhipWeapon
   baseStats:
-    name: "\u97AD"
-    description: "\u97AD\u3067\u6C34\u5E73\u65B9\u5411\u306E\u6575\u3092\u653B\u6483"
-    projectilePrefab: {fileID: 7195811838339357492, guid: 2b9a6d837dc9e5c4b96a803fe5fe3754, type: 3}
+    name: "\u8D64\u3044\u5263"
+    description: "\u65AC\u6483\u3067\u6C34\u5E73\u65B9\u5411\u306E\u6575\u3092\u653B\u6483"
+    projectilePrefab: {fileID: 7195811838339357492, guid: 3f1ffdcfbbab8d443acb073b73132a17, type: 3}
     auraPrefab: {fileID: 0}
     hitEffect: {fileID: 0}
     spawnVariance:
@@ -40,9 +40,9 @@ MonoBehaviour:
     piercing: 0
     maxInstances: 0
   linearGrowth:
-  - name: "\u97AD Lv.2"
+  - name: "\u8D64\u3044\u5263 Lv.2"
     description: "\u57FA\u790E\u30C0\u30E1\u30FC\u30B8\u304C\u5897\u3048\u3001\u653B\u6483\u7BC4\u56F2\u62E1\u5927"
-    projectilePrefab: {fileID: 7195811838339357492, guid: 2b9a6d837dc9e5c4b96a803fe5fe3754, type: 3}
+    projectilePrefab: {fileID: 7195811838339357492, guid: 3f1ffdcfbbab8d443acb073b73132a17, type: 3}
     auraPrefab: {fileID: 0}
     hitEffect: {fileID: 0}
     spawnVariance:
@@ -62,9 +62,9 @@ MonoBehaviour:
     number: 0
     piercing: 0
     maxInstances: 0
-  - name: "\u97AD Lv.3"
+  - name: "\u8D64\u3044\u5263 Lv.3"
     description: "\u3055\u3089\u306B\u57FA\u790E\u30C0\u30E1\u30FC\u30B8\u304C\u5897\u3048\u3001\u653B\u6483\u7BC4\u56F2\u62E1\u5927"
-    projectilePrefab: {fileID: 7195811838339357492, guid: 2b9a6d837dc9e5c4b96a803fe5fe3754, type: 3}
+    projectilePrefab: {fileID: 7195811838339357492, guid: 3f1ffdcfbbab8d443acb073b73132a17, type: 3}
     auraPrefab: {fileID: 0}
     hitEffect: {fileID: 0}
     spawnVariance:
