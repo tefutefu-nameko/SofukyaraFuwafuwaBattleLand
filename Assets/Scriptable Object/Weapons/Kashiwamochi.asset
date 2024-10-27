@@ -15,7 +15,7 @@ MonoBehaviour:
   icon: {fileID: 21300000, guid: 27ce51348fbbde343a5cedf25849f8ab, type: 3}
   maxLevel: 3
   evolutionData:
-  - name: Golden Kashiwamochi
+  - name: "\u67CF\u9905"
     condition: 0
     consumes: 2
     evolutionLevel: 3
@@ -27,8 +27,8 @@ MonoBehaviour:
       level: 1
   behaviour: ProjectileWeapon
   baseStats:
-    name: Kashiwamochi
-    description: Fires quickly in the faced direction.
+    name: "\u67CF\u9905"
+    description: "\u6B63\u9762\u306B\u5411\u304B\u3063\u3066\u67CF\u9905\u3092\u6295\u3052\u3064\u3051\u308B"
     projectilePrefab: {fileID: -1073754142621180257, guid: bf9786742b0d7934a804015e49be0558, type: 3}
     auraPrefab: {fileID: 0}
     hitEffect: {fileID: 0}
@@ -50,8 +50,8 @@ MonoBehaviour:
     piercing: 1
     maxInstances: 70
   linearGrowth:
-  - name: Level 2
-    description: level up.
+  - name: "\u67CF\u9905 Lv.2"
+    description: "\u67CF\u9905\u304C1\u3064\u5897\u3048\u308B"
     projectilePrefab: {fileID: -1073754142621180257, guid: bf9786742b0d7934a804015e49be0558, type: 3}
     auraPrefab: {fileID: 0}
     hitEffect: {fileID: 0}
@@ -72,8 +72,8 @@ MonoBehaviour:
     number: 1
     piercing: 0
     maxInstances: 0
-  - name: Level 3
-    description: 
+  - name: "\u67CF\u9905 Lv.3"
+    description: "\u57FA\u790E\u30C0\u30E1\u30FC\u30B8\u304C\u5897\u3048\u3001\u3055\u3089\u306B\u67CF\u9905\u304C1\u3064\u5897\u3048\u308B"
     projectilePrefab: {fileID: -1073754142621180257, guid: bf9786742b0d7934a804015e49be0558, type: 3}
     auraPrefab: {fileID: 0}
     hitEffect: {fileID: 0}

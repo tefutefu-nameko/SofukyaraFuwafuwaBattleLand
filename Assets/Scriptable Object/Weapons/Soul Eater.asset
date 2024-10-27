@@ -17,8 +17,8 @@ MonoBehaviour:
   evolutionData: []
   behaviour: AuraWeapon
   baseStats:
-    name: Soul Eater
-    description: 
+    name: "\u30BD\u30A6\u30EB\u30A4\u30FC\u30BF\u30FC"
+    description: "\u9818\u57DF\u5C55\u958B!! \u3053\u308C\u3067\u30AD\u30DF\u3082\u4E94\u6761\u609F"
     projectilePrefab: {fileID: 0}
     auraPrefab: {fileID: -4999621459740244065, guid: c6f21d5acaa98c540b9d6093d50a1da8, type: 3}
     hitEffect: {fileID: 0}

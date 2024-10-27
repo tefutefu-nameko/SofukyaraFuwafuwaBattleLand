@@ -16,8 +16,8 @@ MonoBehaviour:
   maxLevel: 2
   evolutionData: []
   baseStats:
-    name: Sofuken Battery
-    description: Makes you like Popeye.
+    name: "\u7956\u7236\u72AC\u30D0\u30C3\u30C6\u30EA\u30FC"
+    description: "\u7956\u7236\u72AC\u306E\u529B\u3067\u653B\u6483\u529B\u30A2\u30C3\u30D7"
     boosts:
       maxHealth: 0
       recovery: 0
