@@ -9350,7 +9350,7 @@ MonoBehaviour:
   availableWeapons:
   - {fileID: 11400000, guid: ea9dff3d56046de44944672e3dd6ea69, type: 2}
   - {fileID: 11400000, guid: 7f05e472731195146abfebf8f3d06c19, type: 2}
-  - {fileID: 11400000, guid: c1a77971b592f964eb809190c8e1e363, type: 2}
+  - {fileID: 11400000, guid: 2130005ed70b50b4ea3e01cd1cd799a7, type: 2}
   - {fileID: 11400000, guid: 5628adefd34089f4aa3749bac0fad1a5, type: 2}
   - {fileID: 11400000, guid: 5723004e832327249bd1ad48893bf293, type: 2}
   availablePassives:
