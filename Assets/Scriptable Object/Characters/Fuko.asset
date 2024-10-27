@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 408832317, guid: bc360360d9f95ad4584456d296bcffc3, type: 3}
   animator: {fileID: 9100000, guid: 18543d07f9f7a4443927527f5c7e5e30, type: 2}
-  name: Fuko
+  name: "\u30D5\u30B3"
   startingWeapon: {fileID: 11400000, guid: 5723004e832327249bd1ad48893bf293, type: 2}
   stats:
     maxHealth: 1000

@@ -17,8 +17,8 @@ MonoBehaviour:
   evolutionData: []
   behaviour: LightningRingWeapon
   baseStats:
-    name: Lightning Ring
-    description: Strikes at random enemies.
+    name: "\u96F7\u306E\u6307\u8F2A"
+    description: "\u30E9\u30F3\u30C0\u30E0\u306A\u6575\u306B\u96F7\u3092\u843D\u3068\u3059"
     projectilePrefab: {fileID: 0}
     auraPrefab: {fileID: 0}
     hitEffect: {fileID: 8226320223771930715, guid: f7d09ec0089d5394e95a277d0d69827d, type: 3}
@@ -39,5 +39,49 @@ MonoBehaviour:
     number: 2
     piercing: 0
     maxInstances: 50
-  linearGrowth: []
+  linearGrowth:
+  - name: "\u96F7\u306E\u6307\u8F2A Lv.2"
+    description: "\u843D\u3061\u308B\u96F7\u304C\u4E00\u3064\u5897\u3048\u308B"
+    projectilePrefab: {fileID: 0}
+    auraPrefab: {fileID: 0}
+    hitEffect: {fileID: 8226320223771930715, guid: f7d09ec0089d5394e95a277d0d69827d, type: 3}
+    spawnVariance:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    lifespan: 0
+    damage: 0
+    damageVariance: 0
+    area: 0
+    speed: 0
+    cooldown: 0
+    projectileInterval: 0
+    knockback: 0
+    number: 1
+    piercing: 0
+    maxInstances: 0
+  - name: "\u96F7\u306E\u6307\u8F2A Lv.3"
+    description: "\u57FA\u790E\u30C0\u30E1\u30FC\u30B8\u304C\u5897\u3048\u3001\u653B\u6483\u5BFE\u8C61\u7BC4\u56F2\u3092\u62E1\u5927"
+    projectilePrefab: {fileID: 0}
+    auraPrefab: {fileID: 0}
+    hitEffect: {fileID: 8226320223771930715, guid: f7d09ec0089d5394e95a277d0d69827d, type: 3}
+    spawnVariance:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    lifespan: 0
+    damage: 5
+    damageVariance: 0
+    area: 2
+    speed: 0
+    cooldown: 0
+    projectileInterval: 0
+    knockback: 0
+    number: 0
+    piercing: 0
+    maxInstances: 0
   randomGrowth: []

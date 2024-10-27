@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 1041663890, guid: 43314c30f071ea6488f1a896177a7058, type: 3}
   animator: {fileID: 9100000, guid: 6eb17352e7102074a83592ed0d96657f, type: 2}
-  name: Nere
+  name: "\u30CD\u30FC\u30EC"
   startingWeapon: {fileID: 11400000, guid: c1a77971b592f964eb809190c8e1e363, type: 2}
   stats:
     maxHealth: 1000

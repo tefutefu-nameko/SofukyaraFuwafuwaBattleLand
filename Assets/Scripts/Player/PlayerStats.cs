@@ -237,12 +237,12 @@ public class PlayerStats : MonoBehaviour
         experienceCap = levelRanges[0].experienceCapIncrease;
 
         //Set the current stats display
-        GameManager.instance.currentHealthDisplay.text = "Health: " + CurrentHealth;
-        GameManager.instance.currentRecoveryDisplay.text = "Recovery: " + CurrentRecovery;
-        GameManager.instance.currentMoveSpeedDisplay.text = "Move Speed: " + CurrentMoveSpeed;
-        GameManager.instance.currentMightDisplay.text = "Might: " + CurrentMight;
-        GameManager.instance.currentProjectileSpeedDisplay.text = "Projectile Speed: " + CurrentProjectileSpeed;
-        GameManager.instance.currentMagnetDisplay.text = "Magnet: " + CurrentMagnet;
+        GameManager.instance.currentHealthDisplay.text = "HP: " + CurrentHealth;
+        GameManager.instance.currentRecoveryDisplay.text = "‰ñ•œ: " + CurrentRecovery;
+        GameManager.instance.currentMoveSpeedDisplay.text = "ˆÚ“®‘¬“x: " + CurrentMoveSpeed;
+        GameManager.instance.currentMightDisplay.text = "UŒ‚”{—¦: " + CurrentMight;
+        GameManager.instance.currentProjectileSpeedDisplay.text = "”­Ë‘¬“x: " + CurrentProjectileSpeed;
+        GameManager.instance.currentMagnetDisplay.text = "ƒAƒCƒeƒ€‹zˆø: " + CurrentMagnet;
 
         GameManager.instance.AssignChosenCharacterUI(characterData);
 

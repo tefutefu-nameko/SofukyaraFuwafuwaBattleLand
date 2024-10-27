@@ -17,8 +17,8 @@ MonoBehaviour:
   evolutionData: []
   behaviour: WhipWeapon
   baseStats:
-    name: Whip
-    description: 
+    name: "\u97AD"
+    description: "\u97AD\u3067\u6C34\u5E73\u65B9\u5411\u306E\u6575\u3092\u653B\u6483"
     projectilePrefab: {fileID: 7195811838339357492, guid: 2b9a6d837dc9e5c4b96a803fe5fe3754, type: 3}
     auraPrefab: {fileID: 0}
     hitEffect: {fileID: 0}
@@ -36,8 +36,52 @@ MonoBehaviour:
     cooldown: 1.35
     projectileInterval: 0.1
     knockback: 0
+    number: 1
+    piercing: 0
+    maxInstances: 0
+  linearGrowth:
+  - name: "\u97AD Lv.2"
+    description: "\u57FA\u790E\u30C0\u30E1\u30FC\u30B8\u304C\u5897\u3048\u3001\u653B\u6483\u7BC4\u56F2\u62E1\u5927"
+    projectilePrefab: {fileID: 7195811838339357492, guid: 2b9a6d837dc9e5c4b96a803fe5fe3754, type: 3}
+    auraPrefab: {fileID: 0}
+    hitEffect: {fileID: 0}
+    spawnVariance:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    lifespan: 0
+    damage: 5
+    damageVariance: 0
+    area: 0.5
+    speed: 0
+    cooldown: 0
+    projectileInterval: 0
+    knockback: 0
     number: 0
     piercing: 0
     maxInstances: 0
-  linearGrowth: []
+  - name: "\u97AD Lv.3"
+    description: "\u3055\u3089\u306B\u57FA\u790E\u30C0\u30E1\u30FC\u30B8\u304C\u5897\u3048\u3001\u653B\u6483\u7BC4\u56F2\u62E1\u5927"
+    projectilePrefab: {fileID: 7195811838339357492, guid: 2b9a6d837dc9e5c4b96a803fe5fe3754, type: 3}
+    auraPrefab: {fileID: 0}
+    hitEffect: {fileID: 0}
+    spawnVariance:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    lifespan: 0
+    damage: 5
+    damageVariance: 0
+    area: 1
+    speed: 0
+    cooldown: 0
+    projectileInterval: 0
+    knockback: 0
+    number: 0
+    piercing: 0
+    maxInstances: 0
   randomGrowth: []

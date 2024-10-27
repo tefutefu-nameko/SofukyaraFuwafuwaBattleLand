@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 1993263162, guid: 8b0b7182cfc07154a826a297c336a942, type: 3}
   animator: {fileID: 9100000, guid: 3ab6d546750f3e94eae071ac81313509, type: 2}
-  name: Memori
+  name: "\u3081\u3082\u308A"
   startingWeapon: {fileID: 11400000, guid: ea9dff3d56046de44944672e3dd6ea69, type: 2}
   stats:
     maxHealth: 1000
