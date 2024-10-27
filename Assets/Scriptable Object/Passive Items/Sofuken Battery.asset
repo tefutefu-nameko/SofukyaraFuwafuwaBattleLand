@@ -26,12 +26,12 @@ MonoBehaviour:
       speed: 0
       magnet: 0
   growth:
-  - name: Level 2
-    description: Gives more muscle.
+  - name: "\u7956\u7236\u72AC\u30D0\u30C3\u30C6\u30EA\u30FC Lv.2"
+    description: "\u66F4\u306B\u653B\u6483\u529B\u30A2\u30C3\u30D7"
     boosts:
       maxHealth: 0
       recovery: 0
       moveSpeed: 0
-      might: 0.1
+      might: 0.4
       speed: 0
       magnet: 0

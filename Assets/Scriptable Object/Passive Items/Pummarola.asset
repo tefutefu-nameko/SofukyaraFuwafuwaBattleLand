@@ -36,7 +36,7 @@ MonoBehaviour:
       speed: 0
       magnet: 0
   growth:
-  - name: Level 2
+  - name: "\u30CF\u30FC\u30C8\u306E\u30DA\u30F3\u30C0\u30F3\u30C8 Lv.2"
     description: "\u3082\u3063\u3068\u56DE\u5FA9"
     boosts:
       maxHealth: 0
