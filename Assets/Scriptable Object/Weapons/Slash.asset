@@ -28,7 +28,7 @@ MonoBehaviour:
       y: 0
       width: 0
       height: 0
-    lifespan: 0.5
+    lifespan: 0.1
     damage: 10
     damageVariance: 2
     area: 1
@@ -37,7 +37,7 @@ MonoBehaviour:
     projectileInterval: 0.1
     knockback: 0
     number: 1
-    piercing: 0
+    piercing: 100
     maxInstances: 0
   linearGrowth:
   - name: "\u8D64\u3044\u5263 Lv.2"
