@@ -126,11 +126,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 189477682287703730, guid: ad61e37f8b1811f41aa2c1c13795d3b2, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 189477682287703730, guid: ad61e37f8b1811f41aa2c1c13795d3b2, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 189477682287703730, guid: ad61e37f8b1811f41aa2c1c13795d3b2, type: 3}
       propertyPath: m_LocalScale.z
@@ -186,7 +186,7 @@ PrefabInstance:
       objectReference: {fileID: 1218668208091956480, guid: 3eb121d3d7bc5d74b810b60bc443bb79, type: 3}
     - target: {fileID: 5117827238469107441, guid: ad61e37f8b1811f41aa2c1c13795d3b2, type: 3}
       propertyPath: m_Name
-      value: ManDogVariant 2
+      value: ManDogVariant 3
       objectReference: {fileID: 0}
     - target: {fileID: 5685501031564643134, guid: ad61e37f8b1811f41aa2c1c13795d3b2, type: 3}
       propertyPath: m_Controller

@@ -4059,7 +4059,7 @@ MonoBehaviour:
   - {fileID: 733886244}
   - {fileID: 1366686281}
   - {fileID: 1711157255}
-  timeLimit: 80
+  timeLimit: 180
   stopwatchDisplay: {fileID: 847060914}
   isGameOver: 0
   choosingUpgrade: 0
@@ -6431,65 +6431,186 @@ MonoBehaviour:
   waves:
   - waveName: Wave 1
     enemyGroups:
-    - enemyName: Bat
+    - enemyName: Cat
       enemyCount: 5
       spawnCount: 0
-      enemyPrefab: {fileID: 749001434197302143, guid: bc0f2aa6c6c1c5f4e89dd685291d1ba5, type: 3}
+      enemyPrefab: {fileID: 5781417620893516989, guid: 2ae9b786c17cea34a93b37c0d56b0f5f, type: 3}
     waveQuota: 0
-    spawnInterval: 1
+    spawnInterval: 2
     spawnCount: 0
   - waveName: Wave 2
     enemyGroups:
-    - enemyName: Red Bat
-      enemyCount: 2
+    - enemyName: manken
+      enemyCount: 5
       spawnCount: 0
-      enemyPrefab: {fileID: 749001434197302143, guid: 355618183585f454daff7c1011adaca7, type: 3}
+      enemyPrefab: {fileID: 5781417620893516989, guid: a18485f06ea16ee4299377a2e549e159, type: 3}
     waveQuota: 0
-    spawnInterval: 3
+    spawnInterval: 1
     spawnCount: 0
   - waveName: Wave 3
     enemyGroups:
-    - enemyName: Yasujiro
-      enemyCount: 1
-      spawnCount: 0
-      enemyPrefab: {fileID: 5117827238469107441, guid: ad61e37f8b1811f41aa2c1c13795d3b2, type: 3}
+    - enemyName: 
+      enemyCount: 5
+      spawnCount: 1
+      enemyPrefab: {fileID: 2470558717733496751, guid: 3f40019f22aa15043898304f0419cbb8, type: 3}
     waveQuota: 0
     spawnInterval: 1
     spawnCount: 0
   - waveName: Wave 4
     enemyGroups:
-    - enemyName: Bat
-      enemyCount: 2
-      spawnCount: 0
-      enemyPrefab: {fileID: 749001434197302143, guid: bc0f2aa6c6c1c5f4e89dd685291d1ba5, type: 3}
-    - enemyName: Red Bat
-      enemyCount: 4
-      spawnCount: 0
-      enemyPrefab: {fileID: 749001434197302143, guid: 355618183585f454daff7c1011adaca7, type: 3}
+    - enemyName: 
+      enemyCount: 5
+      spawnCount: 1
+      enemyPrefab: {fileID: 5781417620893516989, guid: 2ae9b786c17cea34a93b37c0d56b0f5f, type: 3}
     waveQuota: 0
     spawnInterval: 1
     spawnCount: 0
   - waveName: Wave 5
     enemyGroups:
-    - enemyName: Yasujiro
+    - enemyName: 
       enemyCount: 5
-      spawnCount: 0
-      enemyPrefab: {fileID: 5117827238469107441, guid: ad61e37f8b1811f41aa2c1c13795d3b2, type: 3}
+      spawnCount: 1
+      enemyPrefab: {fileID: 5781417620893516989, guid: 2ae9b786c17cea34a93b37c0d56b0f5f, type: 3}
     waveQuota: 0
-    spawnInterval: 4
+    spawnInterval: 1
     spawnCount: 0
   - waveName: Wave 6
     enemyGroups:
-    - enemyName: Gaming Yasujiro
+    - enemyName: 
+      enemyCount: 5
+      spawnCount: 1
+      enemyPrefab: {fileID: 2470558717733496751, guid: 3f40019f22aa15043898304f0419cbb8, type: 3}
+    waveQuota: 0
+    spawnInterval: 1
+    spawnCount: 0
+  - waveName: Wave 8
+    enemyGroups:
+    - enemyName: 
+      enemyCount: 3
+      spawnCount: 1
+      enemyPrefab: {fileID: 5781417620893516989, guid: b470c9c4e5e76f949a993387079806c7, type: 3}
+    waveQuota: 0
+    spawnInterval: 1
+    spawnCount: 0
+  - waveName: Wave 9
+    enemyGroups:
+    - enemyName: 
+      enemyCount: 3
+      spawnCount: 1
+      enemyPrefab: {fileID: 2470558717733496751, guid: 433122876e09a684c8928c401de45965, type: 3}
+    waveQuota: 0
+    spawnInterval: 1
+    spawnCount: 0
+  - waveName: Wave 10
+    enemyGroups:
+    - enemyName: 
+      enemyCount: 3
+      spawnCount: 1
+      enemyPrefab: {fileID: 5781417620893516989, guid: 1b7605d822778324e9d823c8e66e8b18, type: 3}
+    waveQuota: 0
+    spawnInterval: 1
+    spawnCount: 0
+  - waveName: Wave 11
+    enemyGroups:
+    - enemyName: 
+      enemyCount: 3
+      spawnCount: 1
+      enemyPrefab: {fileID: 5781417620893516989, guid: b470c9c4e5e76f949a993387079806c7, type: 3}
+    - enemyName: 
+      enemyCount: 3
+      spawnCount: 1
+      enemyPrefab: {fileID: 5781417620893516989, guid: 2ae9b786c17cea34a93b37c0d56b0f5f, type: 3}
+    waveQuota: 0
+    spawnInterval: 2
+    spawnCount: 0
+  - waveName: Wave 12
+    enemyGroups:
+    - enemyName: 
+      enemyCount: 3
+      spawnCount: 1
+      enemyPrefab: {fileID: 2470558717733496751, guid: 433122876e09a684c8928c401de45965, type: 3}
+    - enemyName: 
+      enemyCount: 3
+      spawnCount: 1
+      enemyPrefab: {fileID: 2470558717733496751, guid: 3f40019f22aa15043898304f0419cbb8, type: 3}
+    waveQuota: 0
+    spawnInterval: 2
+    spawnCount: 0
+  - waveName: Wave 13
+    enemyGroups:
+    - enemyName: 
+      enemyCount: 3
+      spawnCount: 1
+      enemyPrefab: {fileID: 5781417620893516989, guid: 1b7605d822778324e9d823c8e66e8b18, type: 3}
+    - enemyName: 
+      enemyCount: 3
+      spawnCount: 1
+      enemyPrefab: {fileID: 5781417620893516989, guid: a18485f06ea16ee4299377a2e549e159, type: 3}
+    waveQuota: 0
+    spawnInterval: 2
+    spawnCount: 0
+  - waveName: Wave 14
+    enemyGroups:
+    - enemyName: 
+      enemyCount: 3
+      spawnCount: 1
+      enemyPrefab: {fileID: 5781417620893516989, guid: 1b7605d822778324e9d823c8e66e8b18, type: 3}
+    - enemyName: 
+      enemyCount: 3
+      spawnCount: 1
+      enemyPrefab: {fileID: 5781417620893516989, guid: b470c9c4e5e76f949a993387079806c7, type: 3}
+    - enemyName: 
+      enemyCount: 3
+      spawnCount: 1
+      enemyPrefab: {fileID: 2470558717733496751, guid: 433122876e09a684c8928c401de45965, type: 3}
+    waveQuota: 0
+    spawnInterval: 1
+    spawnCount: 0
+  - waveName: Wave 15
+    enemyGroups:
+    - enemyName: 
+      enemyCount: 4
+      spawnCount: 1
+      enemyPrefab: {fileID: 5781417620893516989, guid: 1b7605d822778324e9d823c8e66e8b18, type: 3}
+    - enemyName: 
+      enemyCount: 4
+      spawnCount: 1
+      enemyPrefab: {fileID: 5781417620893516989, guid: 1b7605d822778324e9d823c8e66e8b18, type: 3}
+    - enemyName: 
+      enemyCount: 4
+      spawnCount: 1
+      enemyPrefab: {fileID: 5781417620893516989, guid: a18485f06ea16ee4299377a2e549e159, type: 3}
+    waveQuota: 0
+    spawnInterval: 2
+    spawnCount: 0
+  - waveName: Wave 16
+    enemyGroups:
+    - enemyName: 
       enemyCount: 1
       spawnCount: 0
       enemyPrefab: {fileID: 6084274572555970579, guid: b59c03b4c1923df4a8b88d8fa907c319, type: 3}
+    - enemyName: 
+      enemyCount: 10
+      spawnCount: 1
+      enemyPrefab: {fileID: 5117827238469107441, guid: ad61e37f8b1811f41aa2c1c13795d3b2, type: 3}
+    - enemyName: 
+      enemyCount: 5
+      spawnCount: 1
+      enemyPrefab: {fileID: 5781417620893516989, guid: b470c9c4e5e76f949a993387079806c7, type: 3}
+    - enemyName: 
+      enemyCount: 5
+      spawnCount: 1
+      enemyPrefab: {fileID: 2470558717733496751, guid: 433122876e09a684c8928c401de45965, type: 3}
+    - enemyName: 
+      enemyCount: 5
+      spawnCount: 1
+      enemyPrefab: {fileID: 5781417620893516989, guid: 1b7605d822778324e9d823c8e66e8b18, type: 3}
     waveQuota: 0
-    spawnInterval: 0
+    spawnInterval: 2
     spawnCount: 0
   currentWaveCount: 0
   enemiesAlive: 0
-  maxEnemiesAllowed: 10
+  maxEnemiesAllowed: 20
   maxEnemiesReached: 0
   waveInterval: 10
   relativeSpawnPoints:
@@ -8153,7 +8274,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0

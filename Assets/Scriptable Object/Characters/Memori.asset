@@ -17,7 +17,7 @@ MonoBehaviour:
   name: "\u3081\u3082\u308A"
   startingWeapon: {fileID: 11400000, guid: ea9dff3d56046de44944672e3dd6ea69, type: 2}
   stats:
-    maxHealth: 1000
+    maxHealth: 800
     recovery: 0
     moveSpeed: 5
     might: 1

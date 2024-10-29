@@ -17,9 +17,9 @@ MonoBehaviour:
   name: "\u30D5\u30B3"
   startingWeapon: {fileID: 11400000, guid: 5723004e832327249bd1ad48893bf293, type: 2}
   stats:
-    maxHealth: 1000
+    maxHealth: 600
     recovery: 0
-    moveSpeed: 5
+    moveSpeed: 6
     might: 1
     speed: 1
     magnet: 1
