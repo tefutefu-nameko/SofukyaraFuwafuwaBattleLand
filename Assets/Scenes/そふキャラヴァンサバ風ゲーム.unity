@@ -9350,9 +9350,6 @@ MonoBehaviour:
   availableWeapons:
   - {fileID: 11400000, guid: ea9dff3d56046de44944672e3dd6ea69, type: 2}
   - {fileID: 11400000, guid: 7f05e472731195146abfebf8f3d06c19, type: 2}
-  - {fileID: 11400000, guid: 2130005ed70b50b4ea3e01cd1cd799a7, type: 2}
-  - {fileID: 11400000, guid: 5628adefd34089f4aa3749bac0fad1a5, type: 2}
-  - {fileID: 11400000, guid: 5723004e832327249bd1ad48893bf293, type: 2}
   availablePassives:
   - {fileID: 11400000, guid: 38286b6815cb8204eb06a7447512f40f, type: 2}
   - {fileID: 11400000, guid: ccad914ae7bfeb44499ae47b02e91181, type: 2}
@@ -9374,6 +9371,8 @@ MonoBehaviour:
     upgradeDescriptionDisplay: {fileID: 1087822300}
     upgradeIcon: {fileID: 1342244959}
     upgradeButton: {fileID: 303675407}
+  evolutionWeapons: []
+  consumeWeapons: []
 --- !u!1 &1856949974
 GameObject:
   m_ObjectHideFlags: 0
