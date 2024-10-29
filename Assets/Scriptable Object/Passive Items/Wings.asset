@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Wings
   m_EditorClassIdentifier: 
   icon: {fileID: -491595293, guid: 0090d377f59c1a04db43618221a27856, type: 3}
-  maxLevel: 5
+  maxLevel: 2
   evolutionData: []
   baseStats:
     name: "\u7FFC"

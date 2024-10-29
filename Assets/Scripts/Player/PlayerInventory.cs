@@ -102,6 +102,7 @@ public class PlayerInventory : MonoBehaviour
     {
         // Remove this weapon from the upgrade pool.
         if (removeUpgradeAvailability) availableWeapons.Remove(data);
+        //else if (removeUpgradeAvailability) evolutionWeapons.Remove(data);
 
         for (int i = 0; i < weaponSlots.Count; i++)
         {
@@ -301,6 +302,8 @@ public class PlayerInventory : MonoBehaviour
         List<WeaponData> availableWeaponUpgrades = new List<WeaponData>(availableWeapons);
         List<PassiveData> availablePassiveItemUpgrades = new List<PassiveData>(availablePassives);
 
+        List<WeaponData> evolutionWeaponUpgrades = new List<WeaponData>(evolutionWeapons);
+
         // Iterate through each slot in the upgrade UI.
         foreach (UpgradeUI upgradeOption in upgradeUIOptions)
         {
@@ -310,7 +313,11 @@ public class PlayerInventory : MonoBehaviour
 
             // Determine whether this upgrade should be for passive or active weapons.
             int upgradeType;
-            if (availableWeaponUpgrades.Count == 0)
+            if (evolutionWeaponUpgrades.Count != 0)
+            {
+                upgradeType = 3;
+            }
+            else if (availableWeaponUpgrades.Count == 0)
             {
                 upgradeType = 2;
             }
@@ -425,6 +432,77 @@ public class PlayerInventory : MonoBehaviour
                     }
                 }
             }
+            if (upgradeType == 3)
+            {
+
+                // Pick a weapon upgrade, then remove it so that we don't get it twice.
+                WeaponData chosenWeaponUpgrade = evolutionWeaponUpgrades[UnityEngine.Random.Range(0, evolutionWeaponUpgrades.Count)];
+
+                // 消費するアイテムの検索
+                int num = -1;
+                WeaponData consumeWeapon = null;
+                for (int i = 0; i < evolutionWeaponUpgrades.Count; i++)
+                {
+                    if (evolutionWeaponUpgrades[i].Equals(chosenWeaponUpgrade)) 
+                    {
+                        num = i;
+                    }
+                }
+                consumeWeapon = consumeWeapons[num];
+                
+
+                evolutionWeaponUpgrades.Remove(chosenWeaponUpgrade);
+
+                // Ensure that the selected weapon data is valid.
+                if (chosenWeaponUpgrade != null)
+                {
+                    // Turns on the UI slot.
+                    EnableUpgradeUI(upgradeOption);
+
+                    // Loops through all our existing weapons. If we find a match, we will
+                    // hook an event listener to the button that will level up the weapon
+                    // when this upgrade option is clicked.
+                    bool isLevelUp = false;
+                    for (int i = 0; i < weaponSlots.Count; i++)
+                    {
+                        Weapon w = weaponSlots[i].item as Weapon;
+                        if (w != null && w.data == chosenWeaponUpgrade)
+                        {
+
+                            // Set the Event Listener, item and level description to be that of the next level
+                            /*upgradeOption.upgradeButton.onClick.AddListener(() => LevelUpWeapon(i, i)); //Apply button functionality
+                            Weapon.Stats nextLevel = chosenWeaponUpgrade.GetLevelData(w.currentLevel + 1);
+                            upgradeOption.upgradeDescriptionDisplay.text = nextLevel.description;
+                            upgradeOption.upgradeNameDisplay.text = nextLevel.name;
+                            //upgradeOption.upgradeIcon.sprite = chosenWeaponUpgrade.icon;*/
+                            isLevelUp = true;
+                            break;
+                        }
+                    }
+
+                    // If the code gets here, it means that we will be adding a new weapon, instead of
+                    // upgrading an existing weapon.
+                    if (!isLevelUp)
+                    {
+                        /*/ 進化前アイテムの削除
+                        Remove(consumeWeapon, true);
+                        availableWeaponUpgrades.Remove(consumeWeapon);
+
+                        // 進化武器候補から削除
+                        evolutionWeaponUpgrades.Remove(chosenWeaponUpgrade);*/
+
+                        upgradeOption.upgradeButton.onClick.AddListener(() => Remove(consumeWeapon, true)); // 進化前アイテムの削除
+                        upgradeOption.upgradeButton.onClick.AddListener(() => availableWeaponUpgrades.Remove(consumeWeapon)); // 進化前アイテムの削除
+                        upgradeOption.upgradeButton.onClick.AddListener(() => Add(chosenWeaponUpgrade));  //Apply button functionality
+                        upgradeOption.upgradeButton.onClick.AddListener(() => evolutionWeapons.Remove(chosenWeaponUpgrade)); // 進化武器候補から削除
+                        upgradeOption.upgradeDescriptionDisplay.text = chosenWeaponUpgrade.baseStats.description;  //Apply initial description
+                        upgradeOption.upgradeNameDisplay.text = chosenWeaponUpgrade.baseStats.name;    //Apply initial name
+                        upgradeOption.upgradeIcon.sprite = chosenWeaponUpgrade.icon;
+
+
+                    }
+                }
+            }
         }
     }
 
@@ -451,6 +529,37 @@ public class PlayerInventory : MonoBehaviour
     void EnableUpgradeUI(UpgradeUI ui)
     {
         ui.upgradeNameDisplay.transform.parent.gameObject.SetActive(true);
+    }
+
+
+    [Header("Keep <List is Empty>")]
+    // 進化条件を満たした進化先武器のリスト
+    // はじめは進化条件を満たしている武器が存在しないため、リストは空にする
+    public List<WeaponData> evolutionWeapons = new List<WeaponData>();
+    public List<WeaponData> consumeWeapons = new List<WeaponData>();
+    public List<ItemData> evolutionWeaponsCount = new List<ItemData>();
+
+    // 条件を満たした進化する武器を進化武器専用のリストに追加(Item.csから)
+    // 消費するアイテム(現在は武器限定)を消費武器のリストに格納
+    // リストの名前は異なるがi番目に格納しているのは共通である
+    public void AddEvolutionWeapon(ItemData data ,WeaponData consumeWeapon)
+    {
+        // 進化条件を常に満たしているとき、同じ武器を複数回リストに入れることを防ぐ
+        bool judge = true;
+        for(int i = 0; i < evolutionWeaponsCount.Count; i++)
+        {
+            if (evolutionWeaponsCount[i].Equals(data)){
+                judge = false;
+                break;
+            }
+        }
+        if (judge)
+        {
+            evolutionWeapons.Add(data as WeaponData);
+            evolutionWeaponsCount.Add(data);
+            consumeWeapons.Add(consumeWeapon);
+        }
+
     }
 
 }

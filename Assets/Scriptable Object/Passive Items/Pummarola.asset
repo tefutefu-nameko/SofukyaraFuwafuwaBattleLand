@@ -13,18 +13,8 @@ MonoBehaviour:
   m_Name: Pummarola
   m_EditorClassIdentifier: 
   icon: {fileID: -2002970877, guid: 0090d377f59c1a04db43618221a27856, type: 3}
-  maxLevel: 5
-  evolutionData:
-  - name: Soul Eater
-    condition: 0
-    consumes: 2
-    evolutionLevel: 1
-    catalysts:
-    - itemType: {fileID: 11400000, guid: 7f05e472731195146abfebf8f3d06c19, type: 2}
-      level: 1
-    outcome:
-      itemType: {fileID: 11400000, guid: 7b6b40853f30e53458d9f781fbf04136, type: 2}
-      level: 1
+  maxLevel: 2
+  evolutionData: []
   baseStats:
     name: "\u30CF\u30FC\u30C8\u306E\u30DA\u30F3\u30C0\u30F3\u30C8"
     description: "\u5C11\u3057\u305A\u3064HP\u3092\u56DE\u5FA9"
