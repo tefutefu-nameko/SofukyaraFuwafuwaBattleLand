@@ -172,9 +172,13 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2849406809217955691, guid: ad61e37f8b1811f41aa2c1c13795d3b2, type: 3}
+      propertyPath: drops.Array.data[0].itemPrefab
+      value: 
+      objectReference: {fileID: 1218668208091956480, guid: 3eb121d3d7bc5d74b810b60bc443bb79, type: 3}
     - target: {fileID: 5117827238469107441, guid: ad61e37f8b1811f41aa2c1c13795d3b2, type: 3}
       propertyPath: m_Name
-      value: VocaCat Variant 1
+      value: VocaCat Variant
       objectReference: {fileID: 0}
     - target: {fileID: 5685501031564643134, guid: ad61e37f8b1811f41aa2c1c13795d3b2, type: 3}
       propertyPath: m_Controller

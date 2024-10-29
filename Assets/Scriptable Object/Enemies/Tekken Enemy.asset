@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 126bbdf6a58516f45a7bada845911f7c, type: 3}
   m_Name: Tekken Enemy
   m_EditorClassIdentifier: 
-  moveSpeed: 2
-  maxHealth: 10
-  damage: 30
+  moveSpeed: 3
+  maxHealth: 30
+  damage: 20
