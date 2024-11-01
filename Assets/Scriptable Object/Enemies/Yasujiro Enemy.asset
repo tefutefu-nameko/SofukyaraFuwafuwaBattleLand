@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 126bbdf6a58516f45a7bada845911f7c, type: 3}
   m_Name: Yasujiro Enemy
   m_EditorClassIdentifier: 
-  moveSpeed: 3.5
+  moveSpeed: 2
   maxHealth: 20
   damage: 40

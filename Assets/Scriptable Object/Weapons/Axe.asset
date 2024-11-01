@@ -12,13 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a607af73fb0c42c4c845f92a36d44c94, type: 3}
   m_Name: Axe
   m_EditorClassIdentifier: 
-  icon: {fileID: 856039954, guid: 0090d377f59c1a04db43618221a27856, type: 3}
+  icon: {fileID: 21300000, guid: 9730365a7e47bd9438d1d200483d4f42, type: 3}
   maxLevel: 3
   evolutionData: []
   behaviour: AxeWeapon
   baseStats:
-    name: "\u65A7"
-    description: "\u3064\u3088\u3064\u3088\u306A\u65A7\u3092\u6295\u3052\u308B"
+    name: "\u30D5\u30B3\u69D8\u306E\u304A\u672D"
+    description: "\u3064\u3088\u3064\u3088\u306A\u304A\u672D\u3092\u6295\u3052\u308B"
     projectilePrefab: {fileID: 4453084077871648177, guid: 1118cfa01d1b49e44ab7ebf6a02cd926, type: 3}
     auraPrefab: {fileID: 0}
     hitEffect: {fileID: 0}
@@ -40,8 +40,8 @@ MonoBehaviour:
     piercing: 3
     maxInstances: 70
   linearGrowth:
-  - name: "\u65A7 Lv.2"
-    description: "\u65A7\u3092\u5897\u3084\u3059"
+  - name: "\u30D5\u30B3\u69D8\u306E\u304A\u672D Lv.2"
+    description: "\u304A\u672D\u306E\u6570\u3092\uFF11\u3064\u5897\u3084\u3059"
     projectilePrefab: {fileID: 4453084077871648177, guid: 1118cfa01d1b49e44ab7ebf6a02cd926, type: 3}
     auraPrefab: {fileID: 0}
     hitEffect: {fileID: 0}
@@ -62,8 +62,8 @@ MonoBehaviour:
     number: 1
     piercing: 0
     maxInstances: 0
-  - name: "\u65A7 Lv.3"
-    description: "\u3055\u3089\u306B\u65A7\u3092\u5897\u3084\u3059"
+  - name: "\u30D5\u30B3\u69D8\u306E\u304A\u672D Lv.3"
+    description: "\u3055\u3089\u306B\u304A\u672D\u3092\uFF11\u3064\u5897\u3084\u3059"
     projectilePrefab: {fileID: 4453084077871648177, guid: 1118cfa01d1b49e44ab7ebf6a02cd926, type: 3}
     auraPrefab: {fileID: 0}
     hitEffect: {fileID: 0}

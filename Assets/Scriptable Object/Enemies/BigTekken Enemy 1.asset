@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 126bbdf6a58516f45a7bada845911f7c, type: 3}
   m_Name: BigTekken Enemy 1
   m_EditorClassIdentifier: 
-  moveSpeed: 3.5
+  moveSpeed: 3
   maxHealth: 100
   damage: 20
