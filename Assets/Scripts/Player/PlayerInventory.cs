@@ -368,6 +368,11 @@ public class PlayerInventory : MonoBehaviour
                             upgradeOption.upgradeDescriptionDisplay.text = nextLevel.description;
                             upgradeOption.upgradeNameDisplay.text = nextLevel.name;
                             upgradeOption.upgradeIcon.sprite = chosenWeaponUpgrade.icon;
+                            if (w.currentLevel == w.maxLevel - 1) {
+                                Debug.LogWarning(string.Format("{0}は進化できるよ", chosenWeaponUpgrade.name));
+                                upgradeOption.upgradeButton.onClick.AddListener(() =>  w.DoLevelUp()); 
+                            }
+                            else Debug.LogWarning(string.Format("レベル{0}だと{1}は進化できないよ", w.currentLevel, chosenWeaponUpgrade.name));
                             isLevelUp = true;
                             break;
                         }
@@ -449,7 +454,8 @@ public class PlayerInventory : MonoBehaviour
                     }
                 }
                 consumeWeapon = consumeWeapons[num];
-                
+                Debug.LogWarning(string.Format("{0}番目の{1}を消費するよ", num, consumeWeapon.name));
+
 
                 evolutionWeaponUpgrades.Remove(chosenWeaponUpgrade);
 
@@ -493,6 +499,7 @@ public class PlayerInventory : MonoBehaviour
 
                         upgradeOption.upgradeButton.onClick.AddListener(() => Remove(consumeWeapon, true)); // 進化前アイテムの削除
                         upgradeOption.upgradeButton.onClick.AddListener(() => availableWeaponUpgrades.Remove(consumeWeapon)); // 進化前アイテムの削除
+                        upgradeOption.upgradeButton.onClick.AddListener(() => consumeWeapons.Remove(consumeWeapon)); // 進化前アイテムの削除
                         upgradeOption.upgradeButton.onClick.AddListener(() => Add(chosenWeaponUpgrade));  //Apply button functionality
                         upgradeOption.upgradeButton.onClick.AddListener(() => evolutionWeapons.Remove(chosenWeaponUpgrade)); // 進化武器候補から削除
                         upgradeOption.upgradeDescriptionDisplay.text = chosenWeaponUpgrade.baseStats.description;  //Apply initial description

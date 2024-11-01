@@ -72,8 +72,9 @@ public abstract class Item : MonoBehaviour
     // the weapons that are supposed to be consumed.
     public virtual bool AttemptEvolution(ItemData.Evolution evolutionData, int levelUpAmount = 0)
     {
-        if (!CanEvolve(evolutionData, levelUpAmount))
-            return false;
+        /*if (!CanEvolve(evolutionData, levelUpAmount))
+            return false;*/
+        if (currentLevel < maxLevel) return true;
 
         // Should we consume passives / weapons?
         //bool consumePassives = (evolutionData.consumes & ItemData.Evolution.Consumption.passives) > 0;
@@ -109,6 +110,9 @@ public abstract class Item : MonoBehaviour
     // Whenever an item levels up, attempt to make it evolve.
     public virtual bool DoLevelUp()
     {
+
+        bool evolved = false;
+
         if (evolutionData == null) return true;
 
         // Tries to evolve into every listed evolution of this weapon,
@@ -116,8 +120,13 @@ public abstract class Item : MonoBehaviour
         foreach (ItemData.Evolution e in evolutionData)
         {
             if (e.condition == ItemData.Evolution.Condition.auto)
-                AttemptEvolution(e);
-                //inventory.AddEvolutionWeapon(e.outcome.itemType);
+                evolved = AttemptEvolution(e) || evolved;
+            //inventory.AddEvolutionWeapon(e.outcome.itemType);
+        }
+
+        if (!evolved)
+        {
+            return true;
         }
 
         // Weapon Evolution logic will go here later.
