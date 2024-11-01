@@ -4064,6 +4064,7 @@ MonoBehaviour:
   isGameOver: 0
   choosingUpgrade: 0
   playerObject: {fileID: 1842435935}
+  BossObject: {fileID: 6084274572555970579, guid: b59c03b4c1923df4a8b88d8fa907c319, type: 3}
 --- !u!4 &720567863
 Transform:
   m_ObjectHideFlags: 0
@@ -6429,6 +6430,31 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waves:
+  - waveName: Wave 17
+    enemyGroups:
+    - enemyName: 
+      enemyCount: 1
+      spawnCount: 0
+      enemyPrefab: {fileID: 6084274572555970579, guid: b59c03b4c1923df4a8b88d8fa907c319, type: 3}
+    - enemyName: 
+      enemyCount: 10
+      spawnCount: 1
+      enemyPrefab: {fileID: 5117827238469107441, guid: ad61e37f8b1811f41aa2c1c13795d3b2, type: 3}
+    - enemyName: 
+      enemyCount: 5
+      spawnCount: 1
+      enemyPrefab: {fileID: 5781417620893516989, guid: b470c9c4e5e76f949a993387079806c7, type: 3}
+    - enemyName: 
+      enemyCount: 5
+      spawnCount: 1
+      enemyPrefab: {fileID: 2470558717733496751, guid: 433122876e09a684c8928c401de45965, type: 3}
+    - enemyName: 
+      enemyCount: 5
+      spawnCount: 1
+      enemyPrefab: {fileID: 5781417620893516989, guid: 1b7605d822778324e9d823c8e66e8b18, type: 3}
+    waveQuota: 0
+    spawnInterval: 2
+    spawnCount: 0
   - waveName: Wave 1
     enemyGroups:
     - enemyName: Cat
@@ -6586,24 +6612,16 @@ MonoBehaviour:
   - waveName: Wave 16
     enemyGroups:
     - enemyName: 
-      enemyCount: 1
+      enemyCount: 3
       spawnCount: 0
-      enemyPrefab: {fileID: 6084274572555970579, guid: b59c03b4c1923df4a8b88d8fa907c319, type: 3}
-    - enemyName: 
-      enemyCount: 10
-      spawnCount: 1
-      enemyPrefab: {fileID: 5117827238469107441, guid: ad61e37f8b1811f41aa2c1c13795d3b2, type: 3}
-    - enemyName: 
-      enemyCount: 5
-      spawnCount: 1
       enemyPrefab: {fileID: 5781417620893516989, guid: b470c9c4e5e76f949a993387079806c7, type: 3}
     - enemyName: 
-      enemyCount: 5
-      spawnCount: 1
+      enemyCount: 3
+      spawnCount: 0
       enemyPrefab: {fileID: 2470558717733496751, guid: 433122876e09a684c8928c401de45965, type: 3}
     - enemyName: 
-      enemyCount: 5
-      spawnCount: 1
+      enemyCount: 3
+      spawnCount: 0
       enemyPrefab: {fileID: 5781417620893516989, guid: 1b7605d822778324e9d823c8e66e8b18, type: 3}
     waveQuota: 0
     spawnInterval: 2
@@ -8278,7 +8296,7 @@ AudioSource:
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 0
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -9471,6 +9489,9 @@ MonoBehaviour:
   availableWeapons:
   - {fileID: 11400000, guid: ea9dff3d56046de44944672e3dd6ea69, type: 2}
   - {fileID: 11400000, guid: 7f05e472731195146abfebf8f3d06c19, type: 2}
+  - {fileID: 11400000, guid: 5628adefd34089f4aa3749bac0fad1a5, type: 2}
+  - {fileID: 11400000, guid: 2130005ed70b50b4ea3e01cd1cd799a7, type: 2}
+  - {fileID: 11400000, guid: 5723004e832327249bd1ad48893bf293, type: 2}
   availablePassives:
   - {fileID: 11400000, guid: 38286b6815cb8204eb06a7447512f40f, type: 2}
   - {fileID: 11400000, guid: ccad914ae7bfeb44499ae47b02e91181, type: 2}
@@ -9494,6 +9515,7 @@ MonoBehaviour:
     upgradeButton: {fileID: 303675407}
   evolutionWeapons: []
   consumeWeapons: []
+  evolutionWeaponsCount: []
 --- !u!1 &1856949974
 GameObject:
   m_ObjectHideFlags: 0

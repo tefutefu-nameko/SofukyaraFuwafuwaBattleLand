@@ -186,7 +186,7 @@ PrefabInstance:
       objectReference: {fileID: 1218668208091956480, guid: 3eb121d3d7bc5d74b810b60bc443bb79, type: 3}
     - target: {fileID: 5117827238469107441, guid: ad61e37f8b1811f41aa2c1c13795d3b2, type: 3}
       propertyPath: m_Name
-      value: ManDogVariant 3
+      value: BigManDog
       objectReference: {fileID: 0}
     - target: {fileID: 5685501031564643134, guid: ad61e37f8b1811f41aa2c1c13795d3b2, type: 3}
       propertyPath: m_Controller
@@ -211,7 +211,7 @@ PrefabInstance:
     - target: {fileID: 8419711393797324977, guid: ad61e37f8b1811f41aa2c1c13795d3b2, type: 3}
       propertyPath: enemyData
       value: 
-      objectReference: {fileID: 11400000, guid: 4a6db69b82200b740b100656a8c5f058, type: 2}
+      objectReference: {fileID: 11400000, guid: 4a893ed09cd044046a25a665dfbba1da, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
