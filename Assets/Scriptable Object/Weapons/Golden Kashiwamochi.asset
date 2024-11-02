@@ -29,14 +29,14 @@ MonoBehaviour:
       width: 0
       height: 0
     lifespan: 3
-    damage: 20
+    damage: 15
     damageVariance: 2
     area: 1
     speed: 10
     cooldown: 1
     projectileInterval: 0.1
     knockback: 0.5
-    number: 3
+    number: 5
     piercing: 1
     maxInstances: 70
   linearGrowth: []
