@@ -264,6 +264,7 @@ public class PlayerStats : MonoBehaviour
         }
 
         Recover();
+        UpdateHealthBar();
     }
 
     public void RecalculateStats()
