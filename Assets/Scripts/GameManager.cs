@@ -240,6 +240,7 @@ public class GameManager : MonoBehaviour
     public void GameOver()
     {
         timeSurvivedDisplay.text = stopwatchDisplay.text;
+        Debug.LogWarning(string.Format("{0}", timeSurvivedDisplay.text));
         ChangeState(GameState.GameOver);
     }
 
@@ -309,10 +310,10 @@ public class GameManager : MonoBehaviour
 
         UpdateStopwatchDisplay();
 
-        if (stopwatchTime >= timeLimit)
+        /*if (stopwatchTime >= timeLimit)
         {
             playerObject.SendMessage("Kill");
-        }
+        }*/
     }
 
     void UpdateStopwatchDisplay()
