@@ -4064,7 +4064,6 @@ MonoBehaviour:
   isGameOver: 0
   choosingUpgrade: 0
   playerObject: {fileID: 1842435935}
-  BossObject: {fileID: 6084274572555970579, guid: b59c03b4c1923df4a8b88d8fa907c319, type: 3}
 --- !u!4 &720567863
 Transform:
   m_ObjectHideFlags: 0
@@ -8427,7 +8426,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -7.4324}
+  m_AnchoredPosition: {x: 0, y: -7.432373}
   m_SizeDelta: {x: 0, y: 14.8648}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1625308353

@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 3536640143210856425}
   - component: {fileID: -1916099329919648379}
   - component: {fileID: -5941604513286839587}
+  - component: {fileID: 7178189583135090734}
   m_Layer: 0
   m_Name: Gaming Yasujiro
   m_TagString: Enemy
@@ -302,3 +303,15 @@ MonoBehaviour:
   - name: Red gem
     itemPrefab: {fileID: 1218668208091956480, guid: acef911016a0fbd4a8ef41b06e0858e5, type: 3}
     dropRate: 100
+--- !u!114 &7178189583135090734
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6084274572555970579}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5cf396090d17a6e489d8eb5760db3c6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
