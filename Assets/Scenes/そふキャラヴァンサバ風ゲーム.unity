@@ -4008,7 +4008,7 @@ GameObject:
   - component: {fileID: 720567862}
   - component: {fileID: 720567864}
   m_Layer: 0
-  m_Name: ' Game Manager'
+  m_Name: Game Manager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6429,31 +6429,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waves:
-  - waveName: Wave 17
-    enemyGroups:
-    - enemyName: 
-      enemyCount: 1
-      spawnCount: 0
-      enemyPrefab: {fileID: 6084274572555970579, guid: b59c03b4c1923df4a8b88d8fa907c319, type: 3}
-    - enemyName: 
-      enemyCount: 10
-      spawnCount: 1
-      enemyPrefab: {fileID: 5117827238469107441, guid: ad61e37f8b1811f41aa2c1c13795d3b2, type: 3}
-    - enemyName: 
-      enemyCount: 5
-      spawnCount: 1
-      enemyPrefab: {fileID: 5781417620893516989, guid: b470c9c4e5e76f949a993387079806c7, type: 3}
-    - enemyName: 
-      enemyCount: 5
-      spawnCount: 1
-      enemyPrefab: {fileID: 2470558717733496751, guid: 433122876e09a684c8928c401de45965, type: 3}
-    - enemyName: 
-      enemyCount: 5
-      spawnCount: 1
-      enemyPrefab: {fileID: 5781417620893516989, guid: 1b7605d822778324e9d823c8e66e8b18, type: 3}
-    waveQuota: 0
-    spawnInterval: 2
-    spawnCount: 0
   - waveName: Wave 1
     enemyGroups:
     - enemyName: Cat
@@ -6621,6 +6596,31 @@ MonoBehaviour:
     - enemyName: 
       enemyCount: 3
       spawnCount: 0
+      enemyPrefab: {fileID: 5781417620893516989, guid: 1b7605d822778324e9d823c8e66e8b18, type: 3}
+    waveQuota: 0
+    spawnInterval: 2
+    spawnCount: 0
+  - waveName: Wave 17
+    enemyGroups:
+    - enemyName: 
+      enemyCount: 1
+      spawnCount: 0
+      enemyPrefab: {fileID: 6084274572555970579, guid: b59c03b4c1923df4a8b88d8fa907c319, type: 3}
+    - enemyName: 
+      enemyCount: 10
+      spawnCount: 1
+      enemyPrefab: {fileID: 5117827238469107441, guid: ad61e37f8b1811f41aa2c1c13795d3b2, type: 3}
+    - enemyName: 
+      enemyCount: 5
+      spawnCount: 1
+      enemyPrefab: {fileID: 5781417620893516989, guid: b470c9c4e5e76f949a993387079806c7, type: 3}
+    - enemyName: 
+      enemyCount: 5
+      spawnCount: 1
+      enemyPrefab: {fileID: 2470558717733496751, guid: 433122876e09a684c8928c401de45965, type: 3}
+    - enemyName: 
+      enemyCount: 5
+      spawnCount: 1
       enemyPrefab: {fileID: 5781417620893516989, guid: 1b7605d822778324e9d823c8e66e8b18, type: 3}
     waveQuota: 0
     spawnInterval: 2
