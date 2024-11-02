@@ -6625,6 +6625,69 @@ MonoBehaviour:
     waveQuota: 0
     spawnInterval: 2
     spawnCount: 0
+  - waveName: Wave 18
+    enemyGroups:
+    - enemyName: 
+      enemyCount: 3
+      spawnCount: 1
+      enemyPrefab: {fileID: 5117827238469107441, guid: ad61e37f8b1811f41aa2c1c13795d3b2, type: 3}
+    - enemyName: 
+      enemyCount: 5
+      spawnCount: 1
+      enemyPrefab: {fileID: 5781417620893516989, guid: 2ae9b786c17cea34a93b37c0d56b0f5f, type: 3}
+    - enemyName: 
+      enemyCount: 5
+      spawnCount: 1
+      enemyPrefab: {fileID: 2470558717733496751, guid: 3f40019f22aa15043898304f0419cbb8, type: 3}
+    - enemyName: 
+      enemyCount: 5
+      spawnCount: 1
+      enemyPrefab: {fileID: 5781417620893516989, guid: a18485f06ea16ee4299377a2e549e159, type: 3}
+    waveQuota: 0
+    spawnInterval: 3
+    spawnCount: 0
+  - waveName: Wave 19
+    enemyGroups:
+    - enemyName: 
+      enemyCount: 3
+      spawnCount: 1
+      enemyPrefab: {fileID: 5117827238469107441, guid: ad61e37f8b1811f41aa2c1c13795d3b2, type: 3}
+    - enemyName: 
+      enemyCount: 5
+      spawnCount: 1
+      enemyPrefab: {fileID: 5781417620893516989, guid: 2ae9b786c17cea34a93b37c0d56b0f5f, type: 3}
+    - enemyName: 
+      enemyCount: 5
+      spawnCount: 1
+      enemyPrefab: {fileID: 2470558717733496751, guid: 3f40019f22aa15043898304f0419cbb8, type: 3}
+    - enemyName: 
+      enemyCount: 5
+      spawnCount: 1
+      enemyPrefab: {fileID: 5781417620893516989, guid: a18485f06ea16ee4299377a2e549e159, type: 3}
+    waveQuota: 0
+    spawnInterval: 3
+    spawnCount: 0
+  - waveName: Wave 20
+    enemyGroups:
+    - enemyName: 
+      enemyCount: 3
+      spawnCount: 1
+      enemyPrefab: {fileID: 5117827238469107441, guid: ad61e37f8b1811f41aa2c1c13795d3b2, type: 3}
+    - enemyName: 
+      enemyCount: 5
+      spawnCount: 1
+      enemyPrefab: {fileID: 5781417620893516989, guid: 2ae9b786c17cea34a93b37c0d56b0f5f, type: 3}
+    - enemyName: 
+      enemyCount: 5
+      spawnCount: 1
+      enemyPrefab: {fileID: 2470558717733496751, guid: 3f40019f22aa15043898304f0419cbb8, type: 3}
+    - enemyName: 
+      enemyCount: 5
+      spawnCount: 1
+      enemyPrefab: {fileID: 5781417620893516989, guid: a18485f06ea16ee4299377a2e549e159, type: 3}
+    waveQuota: 0
+    spawnInterval: 3
+    spawnCount: 0
   currentWaveCount: 0
   enemiesAlive: 0
   maxEnemiesAllowed: 20

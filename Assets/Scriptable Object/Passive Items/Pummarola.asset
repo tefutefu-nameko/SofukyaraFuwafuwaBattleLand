@@ -20,7 +20,7 @@ MonoBehaviour:
     description: "\u5C11\u3057\u305A\u3064HP\u3092\u56DE\u5FA9"
     boosts:
       maxHealth: 0
-      recovery: 0.2
+      recovery: 1
       moveSpeed: 0
       might: 0
       speed: 0
@@ -30,7 +30,7 @@ MonoBehaviour:
     description: "\u3082\u3063\u3068\u56DE\u5FA9"
     boosts:
       maxHealth: 0
-      recovery: 0.8
+      recovery: 4
       moveSpeed: 0
       might: 0
       speed: 0

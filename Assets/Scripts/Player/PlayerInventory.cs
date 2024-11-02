@@ -370,9 +370,11 @@ public class PlayerInventory : MonoBehaviour
                             upgradeOption.upgradeIcon.sprite = chosenWeaponUpgrade.icon;
                             if (w.currentLevel == w.maxLevel - 1) {
                                 Debug.LogWarning(string.Format("{0}は進化できるよ", chosenWeaponUpgrade.name));
-                                upgradeOption.upgradeButton.onClick.AddListener(() =>  w.DoLevelUp()); 
+                                upgradeOption.upgradeButton.onClick.AddListener(() =>  w.DoLevelUp());
+                                upgradeOption.upgradeButton.onClick.AddListener(() => availableWeapons.Remove(chosenWeaponUpgrade));
                             }
                             else Debug.LogWarning(string.Format("レベル{0}だと{1}は進化できないよ", w.currentLevel, chosenWeaponUpgrade.name));
+
                             isLevelUp = true;
                             break;
                         }
@@ -422,6 +424,11 @@ public class PlayerInventory : MonoBehaviour
                             upgradeOption.upgradeDescriptionDisplay.text = nextLevel.description;
                             upgradeOption.upgradeNameDisplay.text = nextLevel.name;
                             upgradeOption.upgradeIcon.sprite = chosenPassiveUpgrade.icon;
+                            if (p.currentLevel == p.maxLevel - 1)
+                            {
+                                Debug.LogWarning(string.Format("{0}は進化できるよ", chosenPassiveUpgrade.name));
+                                upgradeOption.upgradeButton.onClick.AddListener(() => availablePassives.Remove(chosenPassiveUpgrade));
+                            }
                             isLevelUp = true;
                             break;
                         }
