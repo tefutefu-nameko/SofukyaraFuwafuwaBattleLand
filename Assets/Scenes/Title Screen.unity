@@ -1745,7 +1745,7 @@ GameObject:
   - component: {fileID: 523957278}
   - component: {fileID: 523957277}
   m_Layer: 5
-  m_Name: Instructions Screen (2)
+  m_Name: Credit Screen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6258,7 +6258,7 @@ GameObject:
   - component: {fileID: 2089001545}
   - component: {fileID: 2089001544}
   m_Layer: 5
-  m_Name: Instructions Screen (1)
+  m_Name: Instructions Beta Screen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

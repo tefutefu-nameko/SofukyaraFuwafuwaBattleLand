@@ -347,7 +347,7 @@ public class PlayerStats : MonoBehaviour
         }
     }
 
-    void UpdateHealthBar()
+    public void UpdateHealthBar()
     {
         //Update the health bar
         healthBar.fillAmount = CurrentHealth / actualStats.maxHealth;
