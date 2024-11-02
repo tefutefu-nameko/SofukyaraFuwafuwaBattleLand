@@ -17,7 +17,7 @@ MonoBehaviour:
   evolutionData: []
   behaviour: ProjectileWeapon
   baseStats:
-    name: "\u91D1\u8272\u306E\u67CF\u9905"
+    name: "\u91D1\u8272\u306E\u67CF\u9905\u306B\u9032\u5316!!"
     description: "\u91D1\u8272\u306B\u8F1D\u304F\u6700\u5F37\u306E\u67CF\u9905"
     projectilePrefab: {fileID: 8408384321083977620, guid: 78edfe7ce2de86641bbc23c17dee4f88, type: 3}
     auraPrefab: {fileID: 0}
@@ -40,48 +40,4 @@ MonoBehaviour:
     piercing: 1
     maxInstances: 70
   linearGrowth: []
-  randomGrowth:
-  - name: 
-    description: 
-    projectilePrefab: {fileID: 0}
-    auraPrefab: {fileID: 0}
-    hitEffect: {fileID: 0}
-    spawnVariance:
-      serializedVersion: 2
-      x: 0
-      y: 0
-      width: 0
-      height: 0
-    lifespan: 0
-    damage: 0
-    damageVariance: 0
-    area: 0
-    speed: 0
-    cooldown: 0
-    projectileInterval: 0
-    knockback: 0
-    number: 1
-    piercing: 0
-    maxInstances: 0
-  - name: 
-    description: 
-    projectilePrefab: {fileID: 0}
-    auraPrefab: {fileID: 0}
-    hitEffect: {fileID: 0}
-    spawnVariance:
-      serializedVersion: 2
-      x: 0
-      y: 0
-      width: 0
-      height: 0
-    lifespan: 0
-    damage: 5
-    damageVariance: 0
-    area: 0
-    speed: 0
-    cooldown: 0
-    projectileInterval: 0
-    knockback: 0
-    number: 1
-    piercing: 0
-    maxInstances: 0
+  randomGrowth: []
