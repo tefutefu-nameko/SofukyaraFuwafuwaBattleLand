@@ -11,9 +11,8 @@ GameObject:
   - component: {fileID: 1045179794353256932}
   - component: {fileID: 5197555862921867163}
   - component: {fileID: 1484186994379811314}
-  - component: {fileID: 2864294524770474154}
   - component: {fileID: -8065704648237352705}
-  - component: {fileID: 4354495512718620243}
+  - component: {fileID: -4125348059269466062}
   m_Layer: 0
   m_Name: Blue gem
   m_TagString: Untagged
@@ -34,7 +33,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &5197555862921867163
 SpriteRenderer:
@@ -123,20 +122,6 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.328125
---- !u!114 &2864294524770474154
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1218668208091956480}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b9c57e18a5602094e9fbb79ddf08e9c0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hasBeenCollected: 0
-  experienceGranted: 60
 --- !u!50 &-8065704648237352705
 Rigidbody2D:
   serializedVersion: 4
@@ -164,7 +149,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &4354495512718620243
+--- !u!114 &-4125348059269466062
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -173,9 +158,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1218668208091956480}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1461350b4a6345a48b3193d0079aa0e8, type: 3}
+  m_Script: {fileID: 11500000, guid: dd2616a40b43f5e4f9f4ebbefa533944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frequency: 3
-  magnitude: 0.1
-  direction: {x: 0, y: 1, z: 0}
+  lifespan: 0.5
+  bobbingAnimation:
+    frequency: 2
+    direction: {x: 0, y: 0.3}
+  experience: 60
+  health: 0

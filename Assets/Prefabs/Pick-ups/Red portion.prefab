@@ -11,9 +11,8 @@ GameObject:
   - component: {fileID: 4384025723569396573}
   - component: {fileID: 8907322043852373953}
   - component: {fileID: 8454768055270236378}
-  - component: {fileID: -3340042376883937760}
   - component: {fileID: 671066196481696443}
-  - component: {fileID: 455527163014008408}
+  - component: {fileID: -4713325742607149461}
   m_Layer: 0
   m_Name: Red portion
   m_TagString: Untagged
@@ -34,7 +33,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &8907322043852373953
 SpriteRenderer:
@@ -133,20 +132,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.40625, y: 0.59375}
   m_EdgeRadius: 0
---- !u!114 &-3340042376883937760
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7164728689649647112}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1fce50c366de8f4a8f9a0897367ecf2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hasBeenCollected: 0
-  healthToRestore: 200
 --- !u!50 &671066196481696443
 Rigidbody2D:
   serializedVersion: 4
@@ -174,7 +159,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &455527163014008408
+--- !u!114 &-4713325742607149461
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -183,9 +168,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 7164728689649647112}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1461350b4a6345a48b3193d0079aa0e8, type: 3}
+  m_Script: {fileID: 11500000, guid: dd2616a40b43f5e4f9f4ebbefa533944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frequency: 3
-  magnitude: 0.1
-  direction: {x: 0, y: 1, z: 0}
+  lifespan: 0.5
+  bobbingAnimation:
+    frequency: 2
+    direction: {x: 0, y: 0.3}
+  experience: 0
+  health: 200
