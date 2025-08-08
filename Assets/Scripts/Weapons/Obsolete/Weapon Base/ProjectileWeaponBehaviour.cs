@@ -19,7 +19,8 @@ public class ProjectileWeaponBehaviour : MonoBehaviour
     protected float currentCooldownDuration;
     protected int currentPierce;
 
-    public ParticleSystem HitEffect;　//エフェクト
+    // ????????
+    public ParticleSystem HitEffect;
 
     void Awake()
     {
@@ -29,9 +30,10 @@ public class ProjectileWeaponBehaviour : MonoBehaviour
         currentPierce = weaponData.Pierce;
     }
 
+    // ????`*=` ? `*` ????????????????????????
     public float GetCurrentDamage()
     {
-        return currentDamage *= FindObjectOfType<PlayerStats>().CurrentMight;
+        return currentDamage * FindObjectOfType<PlayerStats>().CurrentMight;
     }
 
     protected virtual void Start()
@@ -92,9 +94,10 @@ public class ProjectileWeaponBehaviour : MonoBehaviour
         //Reference the script from the collided collider and deal damage using TakeDamage()
         if (col.CompareTag("Enemy"))
         {
-            Destroy(Instantiate(HitEffect, transform.position, Quaternion.identity), 5f);  //攻撃が当たるとエフェクト発生
+            // ???????????????5?????
+            Destroy(Instantiate(HitEffect, transform.position, Quaternion.identity), 5f);
             EnemyStats enemy = col.GetComponent<EnemyStats>();
-            enemy.TakeDamage(GetCurrentDamage(), transform.position);    //Make sure to use currentDamage instead of weaponData.Damage in case any damage multipliers in the future
+            enemy.TakeDamage(GetCurrentDamage(), transform.position);   //Make sure to use currentDamage instead of weaponData.Damage in case any damage multipliers in the future
             ReducePierce();
         }
         else if (col.CompareTag("Prop"))
