@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -80,7 +80,7 @@ public abstract class Item : MonoBehaviour
         //bool consumePassives = (evolutionData.consumes & ItemData.Evolution.Consumption.passives) > 0;
         bool consumeWeapons = (evolutionData.consumes & ItemData.Evolution.Consumption.weapons) > 0;
 
-        // Á”ï‚·‚éƒAƒCƒeƒ€(Œ»İ‚Í•Ší‚ÉŒÀ’è)
+        // æ¶ˆè²»ã™ã‚‹ã‚¢ã‚¤ãƒ†ãƒ (ç¾åœ¨ã¯æ­¦å™¨ã«é™å®š)
         WeaponData weapon = null;
         //PassiveData passiveData;
 

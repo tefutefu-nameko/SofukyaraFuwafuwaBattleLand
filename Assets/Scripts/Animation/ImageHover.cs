@@ -1,10 +1,10 @@
-using UnityEngine;
+ï»¿using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class ImageHover : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
-    public Image targetImage; // •\¦‚µ‚½‚¢ImageƒRƒ“ƒ|[ƒlƒ“ƒg
+    public Image targetImage; // è¡¨ç¤ºã—ãŸã„Imageã‚³ãƒ³ãƒãƒ¼ãƒãƒ³ãƒˆ
 
     private void Start()
     {

@@ -1,4 +1,4 @@
-using System;
+ï»¿using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -369,11 +369,11 @@ public class PlayerInventory : MonoBehaviour
                             upgradeOption.upgradeNameDisplay.text = nextLevel.name;
                             upgradeOption.upgradeIcon.sprite = chosenWeaponUpgrade.icon;
                             if (w.currentLevel == w.maxLevel - 1) {
-                                Debug.LogWarning(string.Format("{0}‚Íi‰»‚Å‚«‚é‚æ", chosenWeaponUpgrade.name));
+                                Debug.LogWarning(string.Format("{0}ã¯é€²åŒ–ã§ãã‚‹ã‚ˆ", chosenWeaponUpgrade.name));
                                 upgradeOption.upgradeButton.onClick.AddListener(() =>  w.DoLevelUp());
                                 upgradeOption.upgradeButton.onClick.AddListener(() => availableWeapons.Remove(chosenWeaponUpgrade));
                             }
-                            else Debug.LogWarning(string.Format("ƒŒƒxƒ‹{0}‚¾‚Æ{1}‚Íi‰»‚Å‚«‚È‚¢‚æ", w.currentLevel, chosenWeaponUpgrade.name));
+                            else Debug.LogWarning(string.Format("ãƒ¬ãƒ™ãƒ«{0}ã ã¨{1}ã¯é€²åŒ–ã§ããªã„ã‚ˆ", w.currentLevel, chosenWeaponUpgrade.name));
 
                             isLevelUp = true;
                             break;
@@ -426,7 +426,7 @@ public class PlayerInventory : MonoBehaviour
                             upgradeOption.upgradeIcon.sprite = chosenPassiveUpgrade.icon;
                             if (p.currentLevel == p.maxLevel - 1)
                             {
-                                Debug.LogWarning(string.Format("{0}‚Íi‰»‚Å‚«‚é‚æ", chosenPassiveUpgrade.name));
+                                Debug.LogWarning(string.Format("{0}ã¯é€²åŒ–ã§ãã‚‹ã‚ˆ", chosenPassiveUpgrade.name));
                                 upgradeOption.upgradeButton.onClick.AddListener(() => availablePassives.Remove(chosenPassiveUpgrade));
                             }
                             isLevelUp = true;
@@ -450,7 +450,7 @@ public class PlayerInventory : MonoBehaviour
                 // Pick a weapon upgrade, then remove it so that we don't get it twice.
                 WeaponData chosenWeaponUpgrade = evolutionWeaponUpgrades[UnityEngine.Random.Range(0, evolutionWeaponUpgrades.Count)];
 
-                // Á”ï‚·‚éƒAƒCƒeƒ€‚ÌŒŸõ
+                // æ¶ˆè²»ã™ã‚‹ã‚¢ã‚¤ãƒ†ãƒ ã®æ¤œç´¢
                 int num = -1;
                 WeaponData consumeWeapon = null;
                 for (int i = 0; i < evolutionWeaponUpgrades.Count; i++)
@@ -461,7 +461,7 @@ public class PlayerInventory : MonoBehaviour
                     }
                 }
                 consumeWeapon = consumeWeapons[num];
-                Debug.LogWarning(string.Format("{0}”Ô–Ú‚Ì{1}‚ğÁ”ï‚·‚é‚æ", num, consumeWeapon.name));
+                Debug.LogWarning(string.Format("{0}ç•ªç›®ã®{1}ã‚’æ¶ˆè²»ã™ã‚‹ã‚ˆ", num, consumeWeapon.name));
 
 
                 evolutionWeaponUpgrades.Remove(chosenWeaponUpgrade);
@@ -497,18 +497,18 @@ public class PlayerInventory : MonoBehaviour
                     // upgrading an existing weapon.
                     if (!isLevelUp)
                     {
-                        /*/ i‰»‘OƒAƒCƒeƒ€‚Ìíœ
+                        /*/ é€²åŒ–å‰ã‚¢ã‚¤ãƒ†ãƒ ã®å‰Šé™¤
                         Remove(consumeWeapon, true);
                         availableWeaponUpgrades.Remove(consumeWeapon);
 
-                        // i‰»•ŠíŒó•â‚©‚çíœ
+                        // é€²åŒ–æ­¦å™¨å€™è£œã‹ã‚‰å‰Šé™¤
                         evolutionWeaponUpgrades.Remove(chosenWeaponUpgrade);*/
 
-                        upgradeOption.upgradeButton.onClick.AddListener(() => Remove(consumeWeapon, true)); // i‰»‘OƒAƒCƒeƒ€‚Ìíœ
-                        upgradeOption.upgradeButton.onClick.AddListener(() => availableWeaponUpgrades.Remove(consumeWeapon)); // i‰»‘OƒAƒCƒeƒ€‚Ìíœ
-                        upgradeOption.upgradeButton.onClick.AddListener(() => consumeWeapons.Remove(consumeWeapon)); // i‰»‘OƒAƒCƒeƒ€‚Ìíœ
+                        upgradeOption.upgradeButton.onClick.AddListener(() => Remove(consumeWeapon, true)); // é€²åŒ–å‰ã‚¢ã‚¤ãƒ†ãƒ ã®å‰Šé™¤
+                        upgradeOption.upgradeButton.onClick.AddListener(() => availableWeaponUpgrades.Remove(consumeWeapon)); // é€²åŒ–å‰ã‚¢ã‚¤ãƒ†ãƒ ã®å‰Šé™¤
+                        upgradeOption.upgradeButton.onClick.AddListener(() => consumeWeapons.Remove(consumeWeapon)); // é€²åŒ–å‰ã‚¢ã‚¤ãƒ†ãƒ ã®å‰Šé™¤
                         upgradeOption.upgradeButton.onClick.AddListener(() => Add(chosenWeaponUpgrade));  //Apply button functionality
-                        upgradeOption.upgradeButton.onClick.AddListener(() => evolutionWeapons.Remove(chosenWeaponUpgrade)); // i‰»•ŠíŒó•â‚©‚çíœ
+                        upgradeOption.upgradeButton.onClick.AddListener(() => evolutionWeapons.Remove(chosenWeaponUpgrade)); // é€²åŒ–æ­¦å™¨å€™è£œã‹ã‚‰å‰Šé™¤
                         upgradeOption.upgradeDescriptionDisplay.text = chosenWeaponUpgrade.baseStats.description;  //Apply initial description
                         upgradeOption.upgradeNameDisplay.text = chosenWeaponUpgrade.baseStats.name;    //Apply initial name
                         upgradeOption.upgradeIcon.sprite = chosenWeaponUpgrade.icon;
@@ -547,18 +547,18 @@ public class PlayerInventory : MonoBehaviour
 
 
     [Header("Keep <List is Empty>")]
-    // i‰»ğŒ‚ğ–‚½‚µ‚½i‰»æ•Ší‚ÌƒŠƒXƒg
-    // ‚Í‚¶‚ß‚Íi‰»ğŒ‚ğ–‚½‚µ‚Ä‚¢‚é•Ší‚ª‘¶İ‚µ‚È‚¢‚½‚ßAƒŠƒXƒg‚Í‹ó‚É‚·‚é
+    // é€²åŒ–æ¡ä»¶ã‚’æº€ãŸã—ãŸé€²åŒ–å…ˆæ­¦å™¨ã®ãƒªã‚¹ãƒˆ
+    // ã¯ã˜ã‚ã¯é€²åŒ–æ¡ä»¶ã‚’æº€ãŸã—ã¦ã„ã‚‹æ­¦å™¨ãŒå­˜åœ¨ã—ãªã„ãŸã‚ã€ãƒªã‚¹ãƒˆã¯ç©ºã«ã™ã‚‹
     public List<WeaponData> evolutionWeapons = new List<WeaponData>();
     public List<WeaponData> consumeWeapons = new List<WeaponData>();
     public List<ItemData> evolutionWeaponsCount = new List<ItemData>();
 
-    // ğŒ‚ğ–‚½‚µ‚½i‰»‚·‚é•Ší‚ği‰»•Šíê—p‚ÌƒŠƒXƒg‚É’Ç‰Á(Item.cs‚©‚ç)
-    // Á”ï‚·‚éƒAƒCƒeƒ€(Œ»İ‚Í•ŠíŒÀ’è)‚ğÁ”ï•Ší‚ÌƒŠƒXƒg‚ÉŠi”[
-    // ƒŠƒXƒg‚Ì–¼‘O‚ÍˆÙ‚È‚é‚ªi”Ô–Ú‚ÉŠi”[‚µ‚Ä‚¢‚é‚Ì‚Í‹¤’Ê‚Å‚ ‚é
+    // æ¡ä»¶ã‚’æº€ãŸã—ãŸé€²åŒ–ã™ã‚‹æ­¦å™¨ã‚’é€²åŒ–æ­¦å™¨å°‚ç”¨ã®ãƒªã‚¹ãƒˆã«è¿½åŠ (Item.csã‹ã‚‰)
+    // æ¶ˆè²»ã™ã‚‹ã‚¢ã‚¤ãƒ†ãƒ (ç¾åœ¨ã¯æ­¦å™¨é™å®š)ã‚’æ¶ˆè²»æ­¦å™¨ã®ãƒªã‚¹ãƒˆã«æ ¼ç´
+    // ãƒªã‚¹ãƒˆã®åå‰ã¯ç•°ãªã‚‹ãŒiç•ªç›®ã«æ ¼ç´ã—ã¦ã„ã‚‹ã®ã¯å…±é€šã§ã‚ã‚‹
     public void AddEvolutionWeapon(ItemData data ,WeaponData consumeWeapon)
     {
-        // i‰»ğŒ‚ğí‚É–‚½‚µ‚Ä‚¢‚é‚Æ‚«A“¯‚¶•Ší‚ğ•¡”‰ñƒŠƒXƒg‚É“ü‚ê‚é‚±‚Æ‚ğ–h‚®
+        // é€²åŒ–æ¡ä»¶ã‚’å¸¸ã«æº€ãŸã—ã¦ã„ã‚‹ã¨ãã€åŒã˜æ­¦å™¨ã‚’è¤‡æ•°å›ãƒªã‚¹ãƒˆã«å…¥ã‚Œã‚‹ã“ã¨ã‚’é˜²ã
         bool judge = true;
         for(int i = 0; i < evolutionWeaponsCount.Count; i++)
         {

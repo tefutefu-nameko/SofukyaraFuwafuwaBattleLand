@@ -1,4 +1,4 @@
-using System;
+ï»¿using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -224,7 +224,7 @@ public class PlayerStats : MonoBehaviour
         collector.SetRadius(actualStats.magnet);
         health = actualStats.maxHealth;
 
-        // uÀ‚ÌƒXƒNƒŠƒvƒgŠÔˆá‚Á‚Ä‚é‚¯‚Ç³‰ğ‚Í‚±‚ê‚Ì‚Í‚¸
+        // è¬›åº§ã®ã‚¹ã‚¯ãƒªãƒ—ãƒˆé–“é•ã£ã¦ã‚‹ã‘ã©æ­£è§£ã¯ã“ã‚Œã®ã¯ãš
         playerAnimator = GetComponent<PlayerAnimator>();
         if (characterData.animator)
             playerAnimator.SetAnimator(characterData.animator);
@@ -241,11 +241,11 @@ public class PlayerStats : MonoBehaviour
 
         //Set the current stats display
         GameManager.instance.currentHealthDisplay.text = "HP: " + CurrentHealth;
-        GameManager.instance.currentRecoveryDisplay.text = "‰ñ•œ: " + CurrentRecovery;
-        GameManager.instance.currentMoveSpeedDisplay.text = "ˆÚ“®‘¬“x: " + CurrentMoveSpeed;
-        GameManager.instance.currentMightDisplay.text = "UŒ‚”{—¦: " + CurrentMight;
-        GameManager.instance.currentProjectileSpeedDisplay.text = "”­Ë‘¬“x: " + CurrentProjectileSpeed;
-        GameManager.instance.currentMagnetDisplay.text = "ƒAƒCƒeƒ€‹zˆø: " + CurrentMagnet;
+        GameManager.instance.currentRecoveryDisplay.text = "å›å¾©: " + CurrentRecovery;
+        GameManager.instance.currentMoveSpeedDisplay.text = "ç§»å‹•é€Ÿåº¦: " + CurrentMoveSpeed;
+        GameManager.instance.currentMightDisplay.text = "æ”»æ’ƒå€ç‡: " + CurrentMight;
+        GameManager.instance.currentProjectileSpeedDisplay.text = "ç™ºå°„é€Ÿåº¦: " + CurrentProjectileSpeed;
+        GameManager.instance.currentMagnetDisplay.text = "ã‚¢ã‚¤ãƒ†ãƒ å¸å¼•: " + CurrentMagnet;
 
         GameManager.instance.AssignChosenCharacterUI(characterData);
 
