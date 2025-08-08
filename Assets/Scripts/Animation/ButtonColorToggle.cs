@@ -1,20 +1,20 @@
-using UnityEngine;
-using TMPro; // TextMeshPro‚ğg—p‚·‚é‚½‚ß‚Ì–¼‘O‹óŠÔ
+ï»¿using UnityEngine;
+using TMPro; // TextMeshProã‚’ä½¿ç”¨ã™ã‚‹ãŸã‚ã®åå‰ç©ºé–“
 using UnityEngine.EventSystems;
 
 public class ButtonColorToggle : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
-    private TMP_Text buttonText; // TMP_TextŒ^‚É•ÏX
+    private TMP_Text buttonText; // TMP_Textå‹ã«å¤‰æ›´
     private Color originalColor;
-    public Color hoverColor = Color.white; // ƒzƒo[‚ÌF
+    public Color hoverColor = Color.white; // ãƒ›ãƒãƒ¼æ™‚ã®è‰²
 
     void Start()
     {
-        // ƒ{ƒ^ƒ“‚ÌqƒIƒuƒWƒFƒNƒg‚©‚çTMP_TextƒRƒ“ƒ|[ƒlƒ“ƒg‚ğæ“¾
+        // ãƒœã‚¿ãƒ³ã®å­ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‹ã‚‰TMP_Textã‚³ãƒ³ãƒãƒ¼ãƒãƒ³ãƒˆã‚’å–å¾—
         buttonText = GetComponentInChildren<TMP_Text>();
         if (buttonText != null)
         {
-            originalColor = buttonText.color; // Œ³‚ÌF‚ğ•Û‘¶
+            originalColor = buttonText.color; // å…ƒã®è‰²ã‚’ä¿å­˜
         }
         else
         {
@@ -26,7 +26,7 @@ public class ButtonColorToggle : MonoBehaviour, IPointerEnterHandler, IPointerEx
     {
         if (buttonText != null)
         {
-            buttonText.color = hoverColor; // ƒzƒo[‚ÉF‚ğ•ÏX
+            buttonText.color = hoverColor; // ãƒ›ãƒãƒ¼æ™‚ã«è‰²ã‚’å¤‰æ›´
         }
     }
 
@@ -34,7 +34,7 @@ public class ButtonColorToggle : MonoBehaviour, IPointerEnterHandler, IPointerEx
     {
         if (buttonText != null)
         {
-            buttonText.color = originalColor; // Œ³‚ÌF‚É–ß‚·
+            buttonText.color = originalColor; // å…ƒã®è‰²ã«æˆ»ã™
         }
     }
 }

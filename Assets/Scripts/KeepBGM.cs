@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 //using UnityEditor.U2D.Animation;
 using UnityEngine;
@@ -24,17 +24,17 @@ public class KeepBGM : MonoBehaviour
 
 
     // Update is called once per frame
-    // ƒQ[ƒ€‰æ–Ê‚ÉˆÚs‚µ‚½‚çƒƒjƒ…[‰æ–Ê‚ÌBGMƒIƒuƒWƒFƒNƒg‚ğ”j‰ó‚·‚é
+    // ã‚²ãƒ¼ãƒ ç”»é¢ã«ç§»è¡Œã—ãŸã‚‰ãƒ¡ãƒ‹ãƒ¥ãƒ¼ç”»é¢ã®BGMã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‚’ç ´å£Šã™ã‚‹
     void Update()
     {
-        if (SceneManager.GetActiveScene().name.Equals("‚»‚ÓƒLƒƒƒ‰ƒ”ƒ@ƒ“ƒTƒo•—ƒQ[ƒ€"))
+        if (SceneManager.GetActiveScene().name.Equals("ããµã‚­ãƒ£ãƒ©ãƒ´ã‚¡ãƒ³ã‚µãƒé¢¨ã‚²ãƒ¼ãƒ "))
         {
             Destroy(gameObject);
         }
     }
 
 
-    // ƒ{ƒ^ƒ“‘€ì‚Ì‚Æ‚«‚Í‚±‚ÌŠÖ”g‚¤
+    // ãƒœã‚¿ãƒ³æ“ä½œã®ã¨ãã¯ã“ã®é–¢æ•°ä½¿ã†
     public void DestroySingleton()
     {
         Destroy(gameObject);

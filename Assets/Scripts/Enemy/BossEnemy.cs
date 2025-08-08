@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -6,16 +6,16 @@ public class BossEnemy : MonoBehaviour
 {
     PlayerStats player;
 
-    // PlayerStats‚ğŒp‘±“I‚ÉXV
+    // PlayerStatsã‚’ç¶™ç¶šçš„ã«æ›´æ–°
     void Update()
     {
         player = FindObjectOfType<PlayerStats>();
     }
 
-    // BossŒ‚”j‚ÅƒQ[ƒ€I—¹
+    // Bossæ’ƒç ´ã§ã‚²ãƒ¼ãƒ çµ‚äº†
     private void OnDestroy()
     {
-        Debug.LogWarning("Boss‚ÍƒVƒ“‚¾‚æ");
+        Debug.LogWarning("Bossã¯ã‚·ãƒ³ã ã‚ˆ");
         player.Kill();
     }
 }
