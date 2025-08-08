@@ -27,7 +27,7 @@ public class KeepBGM : MonoBehaviour
     // ゲーム画面に移行したらメニュー画面のBGMオブジェクトを破壊する
     void Update()
     {
-        if (SceneManager.GetActiveScene().name.Equals("そふキャラヴァンサバ風ゲーム"))
+        if (SceneManager.GetActiveScene().name.Equals("Game"))
         {
             Destroy(gameObject);
         }
