@@ -2,7 +2,7 @@
 using TMPro; // TextMeshProを使用するための名前空間
 using UnityEngine.EventSystems;
 
-public class ButtonColorToggle : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
+public class ButtonColorToggle : UIViewBase, IPointerEnterHandler, IPointerExitHandler
 {
     private TMP_Text buttonText; // TMP_Text型に変更
     private Color originalColor;

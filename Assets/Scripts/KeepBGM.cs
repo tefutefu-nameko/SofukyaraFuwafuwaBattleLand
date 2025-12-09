@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class KeepBGM : MonoBehaviour
+public class KeepBGM : ManagerBase
 {
     public static KeepBGM instance;
 

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DropRateManager : MonoBehaviour
+public class DropRateManager : ManagerBase
 {
     [System.Serializable]   //Serialize the class
     public class Drops
