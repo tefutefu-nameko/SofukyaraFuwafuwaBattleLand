@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/Art/MenuAssets/共通ButtonA.png.meta
 guid: efeb5f23ad373e849a92328d084a099d
+=======
+guid: 3666d6566c2e82d4f85a0d243abded14
+>>>>>>> main:Assets/Art/MenuAssets/共通ボタンA.png.meta
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -34,7 +38,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
