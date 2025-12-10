@@ -18,12 +18,9 @@ public class PlayerAnimator : MonoBehaviour
 
     void Update()
     {
-        // Always update sprite direction based on mouse position
-        SpriteDirectionChecker();
-
         if (pm.moveDir.x != 0 || pm.moveDir.y != 0)
         {
-            // Moving animation logic if needed, currently just direction checks are here but split later if needed
+            SpriteDirectionChecker();
         }
         else
         {
@@ -33,7 +30,7 @@ public class PlayerAnimator : MonoBehaviour
     }
     void SpriteDirectionChecker()
     {
-        if (pm.mouseDir.x < 0)
+        if (pm.lastHorizontalVector < 0)
         {
             am.SetBool("MoveLeft", true);
             am.SetBool("MoveRight", false);

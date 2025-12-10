@@ -13,8 +13,6 @@ public class PlayerMovement : MonoBehaviour
     public float lastVerticalVector;
     [HideInInspector]
     public Vector2 lastMovedVector;
-    [HideInInspector]
-    public Vector2 mouseDir;
 
     //References
     Rigidbody2D rb;
@@ -70,12 +68,6 @@ public class PlayerMovement : MonoBehaviour
         {
             lastMovedVector = new Vector2(lastHorizontalVector, lastVerticalVector);    //While moving
         }
-
-        // Mouse Aiming Logic
-        Vector3 mousePosition = Input.mousePosition;
-        Vector3 screenPoint = Camera.main.WorldToScreenPoint(transform.localPosition);
-        Vector2 offset = new Vector2(mousePosition.x - screenPoint.x, mousePosition.y - screenPoint.y);
-        mouseDir = offset.normalized;
     }
 
     void Move()
