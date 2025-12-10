@@ -57,10 +57,12 @@ public class PlayerInventory : MonoBehaviour
     public List<UpgradeUI> upgradeUIOptions = new List<UpgradeUI>();    //List of ui for upgrade options present in the scene
 
     PlayerStats player;
+    [SerializeField] GameStateService gameStateService;
 
     void Start()
     {
         player = GetComponent<PlayerStats>();
+        if (!gameStateService) gameStateService = FindObjectOfType<GameStateService>();
     }
 
     // Checks if the inventory has an item of a certaint type.
@@ -186,8 +188,8 @@ public class PlayerInventory : MonoBehaviour
             weaponSlots[slotNum].Assign(spawnedWeapon);
 
             // Close the level up UI if it is on.
-            if (GameManager.instance != null && GameManager.instance.choosingUpgrade)
-                GameManager.instance.EndLevelUp();
+        if (gameStateService != null && gameStateService.IsChoosingUpgrade)
+            gameStateService.EndLevelUp();
 
             return slotNum;
         }
@@ -232,9 +234,9 @@ public class PlayerInventory : MonoBehaviour
         // Assign the passive to the slot.
         passiveSlots[slotNum].Assign(p);
 
-        if (GameManager.instance != null && GameManager.instance.choosingUpgrade)
+        if (gameStateService != null && gameStateService.IsChoosingUpgrade)
         {
-            GameManager.instance.EndLevelUp();
+            gameStateService.EndLevelUp();
         }
         player.RecalculateStats();
 
@@ -266,9 +268,9 @@ public class PlayerInventory : MonoBehaviour
             }
         }
 
-        if (GameManager.instance != null && GameManager.instance.choosingUpgrade)
+        if (gameStateService != null && gameStateService.IsChoosingUpgrade)
         {
-            GameManager.instance.EndLevelUp();
+            gameStateService.EndLevelUp();
         }
     }
 
@@ -287,9 +289,9 @@ public class PlayerInventory : MonoBehaviour
             }
         }
 
-        if (GameManager.instance != null && GameManager.instance.choosingUpgrade)
+        if (gameStateService != null && gameStateService.IsChoosingUpgrade)
         {
-            GameManager.instance.EndLevelUp();
+            gameStateService.EndLevelUp();
         }
         player.RecalculateStats();
     }
