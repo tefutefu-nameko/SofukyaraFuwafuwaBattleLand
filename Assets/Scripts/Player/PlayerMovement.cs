@@ -8,6 +8,8 @@ public class PlayerMovement : MonoBehaviour
     [HideInInspector]
     public Vector2 moveDir;
     [HideInInspector]
+    public Vector2 mouseDir; // Vector2 for the direction of the mouse
+    [HideInInspector]
     public float lastHorizontalVector;
     [HideInInspector]
     public float lastVerticalVector;
@@ -17,15 +19,14 @@ public class PlayerMovement : MonoBehaviour
     //References
     Rigidbody2D rb;
     PlayerStats player;
+    GameStateService gameStateService;
 
     void Start()
     {
         player = GetComponent<PlayerStats>();
         rb = GetComponent<Rigidbody2D>();
+        gameStateService = FindObjectOfType<GameStateService>();
         lastMovedVector = new Vector2(1, 0f); //If we don't do this and game starts up and don't move, the projectile weapon will have no momentum
-        
-        // サービスをキャッシュ
-        if (!gameStateService) gameStateService = FindObjectOfType<GameStateService>();
     }
 
     void Update()
@@ -38,10 +39,9 @@ public class PlayerMovement : MonoBehaviour
         Move();
     }
 
-    [SerializeField] GameStateService gameStateService;
-
     void InputManagement()
     {
+        // Use service if available for robust check
         if (gameStateService != null && (gameStateService.IsGameOver || gameStateService.CurrentState != GameState.Gameplay))
         {
             return;
@@ -51,6 +51,12 @@ public class PlayerMovement : MonoBehaviour
         float moveY = Input.GetAxisRaw("Vertical");
 
         moveDir = new Vector2(moveX, moveY).normalized;
+
+        // Calculate Mouse Direction
+        Vector3 mousePosition = Input.mousePosition;
+        Vector3 screenPoint = Camera.main.WorldToScreenPoint(transform.localPosition);
+        Vector2 offset = new Vector2(mousePosition.x - screenPoint.x, mousePosition.y - screenPoint.y);
+        mouseDir = offset.normalized;
 
         if (moveDir.x != 0)
         {
