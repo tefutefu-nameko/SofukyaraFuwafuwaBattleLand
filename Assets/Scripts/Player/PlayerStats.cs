@@ -14,6 +14,12 @@ public class PlayerStats : MonoBehaviour
     float health;
 
     #region Current Stats Properties
+    [Header("Services")]
+    [SerializeField] GameStateService gameStateService;
+    [SerializeField] UIService uiService;
+    [SerializeField] TimeService timeService;
+    [SerializeField] PlayerStatsUI statsUI;
+
     public float CurrentHealth
     {
         get { return health; }
@@ -23,13 +29,7 @@ public class PlayerStats : MonoBehaviour
             if (health != value)
             {
                 health = value;
-                if (GameManager.instance != null)
-                {
-                    GameManager.instance.currentHealthDisplay.text = string.Format(
-                        "Health: {0} / {1}",
-                        health, actualStats.maxHealth
-                    );
-                }
+                statsUI?.UpdateHealth(health, actualStats.maxHealth);
 
             }
         }
@@ -47,13 +47,7 @@ public class PlayerStats : MonoBehaviour
             if (actualStats.maxHealth != value)
             {
                 actualStats.maxHealth = value;
-                if (GameManager.instance != null)
-                {
-                    GameManager.instance.currentHealthDisplay.text = string.Format(
-                        "Health: {0} / {1}",
-                        health, actualStats.maxHealth
-                    );
-                }
+                statsUI?.UpdateHealth(health, actualStats.maxHealth);
                 //Update the real time value of the stat
                 //Add any additional logic here that needs to be executed when the value changes
             }
@@ -75,10 +69,7 @@ public class PlayerStats : MonoBehaviour
             if (actualStats.recovery != value)
             {
                 actualStats.recovery = value;
-                if (GameManager.instance != null)
-                {
-                    GameManager.instance.currentRecoveryDisplay.text = "Recovery: " + actualStats.recovery;
-                }
+                statsUI?.UpdateRecovery(actualStats.recovery);
             }
         }
     }
@@ -97,10 +88,7 @@ public class PlayerStats : MonoBehaviour
             if (actualStats.moveSpeed != value)
             {
                 actualStats.moveSpeed = value;
-                if (GameManager.instance != null)
-                {
-                    GameManager.instance.currentMoveSpeedDisplay.text = "Move Speed: " + actualStats.moveSpeed;
-                }
+                statsUI?.UpdateMoveSpeed(actualStats.moveSpeed);
             }
         }
     }
@@ -119,10 +107,7 @@ public class PlayerStats : MonoBehaviour
             if (actualStats.might != value)
             {
                 actualStats.might = value;
-                if (GameManager.instance != null)
-                {
-                    GameManager.instance.currentMightDisplay.text = "Might: " + actualStats.might;
-                }
+                statsUI?.UpdateMight(actualStats.might);
             }
         }
     }
@@ -141,10 +126,7 @@ public class PlayerStats : MonoBehaviour
             if (actualStats.speed != value)
             {
                 actualStats.speed = value;
-                if (GameManager.instance != null)
-                {
-                    GameManager.instance.currentProjectileSpeedDisplay.text = "Projectile Speed: " + actualStats.speed;
-                }
+                statsUI?.UpdateProjectileSpeed(actualStats.speed);
             }
         }
     }
@@ -163,10 +145,7 @@ public class PlayerStats : MonoBehaviour
             if (actualStats.magnet != value)
             {
                 actualStats.magnet = value;
-                if (GameManager.instance != null)
-                {
-                    GameManager.instance.currentMagnetDisplay.text = "Magnet: " + actualStats.magnet;
-                }
+                statsUI?.UpdateMagnet(actualStats.magnet);
             }
         }
     }
@@ -202,10 +181,8 @@ public class PlayerStats : MonoBehaviour
     public int weaponIndex;
     public int passiveItemIndex;
 
-    [Header("UI")]
-    public Image healthBar;
-    public Image expBar;
-    public TMP_Text levelText;
+    // [Header("UI")]
+    // Removed old UI references favor of PlayerStatsUI presenter.
 
     PlayerAnimator playerAnimator;
 
@@ -217,6 +194,10 @@ public class PlayerStats : MonoBehaviour
 
         inventory = GetComponent<PlayerInventory>();
         collector = GetComponentInChildren<PlayerCollector>();
+        if (!gameStateService) gameStateService = FindObjectOfType<GameStateService>();
+        if (!uiService) uiService = FindObjectOfType<UIService>();
+        if (!timeService) timeService = FindObjectOfType<TimeService>();
+        if (!statsUI) statsUI = FindObjectOfType<PlayerStatsUI>();
 
 
         //Assign the variables
@@ -240,14 +221,14 @@ public class PlayerStats : MonoBehaviour
         experienceCap = levelRanges[0].experienceCapIncrease;
 
         //Set the current stats display
-        GameManager.instance.currentHealthDisplay.text = "HP: " + CurrentHealth;
-        GameManager.instance.currentRecoveryDisplay.text = "回復: " + CurrentRecovery;
-        GameManager.instance.currentMoveSpeedDisplay.text = "移動速度: " + CurrentMoveSpeed;
-        GameManager.instance.currentMightDisplay.text = "攻撃倍率: " + CurrentMight;
-        GameManager.instance.currentProjectileSpeedDisplay.text = "発射速度: " + CurrentProjectileSpeed;
-        GameManager.instance.currentMagnetDisplay.text = "アイテム吸引: " + CurrentMagnet;
+        statsUI?.UpdateHealth(CurrentHealth, actualStats.maxHealth);
+        statsUI?.UpdateRecovery(CurrentRecovery);
+        statsUI?.UpdateMoveSpeed(CurrentMoveSpeed);
+        statsUI?.UpdateMight(CurrentMight);
+        statsUI?.UpdateProjectileSpeed(CurrentProjectileSpeed);
+        statsUI?.UpdateMagnet(CurrentMagnet);
 
-        GameManager.instance.AssignChosenCharacterUI(characterData);
+        uiService?.AssignChosenCharacterUI(characterData);
 
         UpdateHealthBar();
         UpdateExpBar();
@@ -316,20 +297,19 @@ public class PlayerStats : MonoBehaviour
 
             UpdateLevelText();
 
-            GameManager.instance.StartLevelUp();
+            gameStateService?.StartLevelUp();
+            inventory.RemoveAndApplyUpgrades();
         }
     }
 
     void UpdateExpBar()
     {
-        // Update exp bar fill amount
-        expBar.fillAmount = (float)experience / experienceCap;
+        statsUI?.UpdateExpBar(experience, experienceCap);
     }
 
     void UpdateLevelText()
     {
-        // Update level text
-        levelText.text = "LV " + level.ToString();
+        statsUI?.UpdateLevel(level);
     }
 
     public void TakeDamage(float dmg)
@@ -355,19 +335,16 @@ public class PlayerStats : MonoBehaviour
 
     public void UpdateHealthBar()
     {
-        //Update the health bar
-        healthBar.fillAmount = CurrentHealth / actualStats.maxHealth;
+        statsUI?.UpdateHealth(CurrentHealth, actualStats.maxHealth);
     }
 
     public void Kill()
     {
-        if (!GameManager.instance.isGameOver)
+        if (gameStateService != null && !gameStateService.IsGameOver)
         {
-            GameManager.instance.AssignLevelReachedUI(level);
-
-            GameManager.instance.AssignChosenWeaponsAndPassiveItemsUI(inventory.weaponSlots, inventory.passiveSlots);
-
-            GameManager.instance.GameOver();
+            uiService?.AssignLevelReachedUI(level);
+            uiService?.AssignChosenWeaponsAndPassiveItemsUI(inventory.weaponSlots, inventory.passiveSlots);
+            gameStateService.GameOver();
         }
     }
 

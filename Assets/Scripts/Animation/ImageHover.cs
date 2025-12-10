@@ -2,7 +2,7 @@
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class ImageHover : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
+public class ImageHover : UIViewBase, IPointerEnterHandler, IPointerExitHandler
 {
     public Image targetImage; // 表示したいImageコンポーネント
 

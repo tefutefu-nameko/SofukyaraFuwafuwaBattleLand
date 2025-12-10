@@ -25,6 +25,9 @@ public class PlayerMovement : MonoBehaviour
         player = GetComponent<PlayerStats>();
         rb = GetComponent<Rigidbody2D>();
         lastMovedVector = new Vector2(1, 0f); //If we don't do this and game starts up and don't move, the projectile weapon will have no momentum
+        
+        // サービスをキャッシュ
+        if (!gameStateService) gameStateService = FindObjectOfType<GameStateService>();
     }
 
     void Update()
@@ -37,9 +40,11 @@ public class PlayerMovement : MonoBehaviour
         Move();
     }
 
+    [SerializeField] GameStateService gameStateService;
+
     void InputManagement()
     {
-        if (GameManager.instance.isGameOver)
+        if (gameStateService != null && (gameStateService.IsGameOver || gameStateService.CurrentState != GameState.Gameplay))
         {
             return;
         }
@@ -75,7 +80,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Move()
     {
-        if (GameManager.instance.isGameOver)
+        if (gameStateService != null && (gameStateService.IsGameOver || gameStateService.CurrentState != GameState.Gameplay))
         {
             return;
         }
