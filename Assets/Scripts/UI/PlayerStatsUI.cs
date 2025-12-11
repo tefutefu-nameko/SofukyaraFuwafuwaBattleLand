@@ -20,6 +20,40 @@ public class PlayerStatsUI : UIViewBase
     [SerializeField] Image expBar;
     [SerializeField] TMP_Text levelText;
 
+    PlayerStats playerStats;
+
+    void OnEnable()
+    {
+        if (!playerStats) playerStats = FindObjectOfType<PlayerStats>();
+
+        if (playerStats)
+        {
+            playerStats.OnHealthChanged += UpdateHealth;
+            playerStats.OnRecoveryChanged += UpdateRecovery;
+            playerStats.OnMoveSpeedChanged += UpdateMoveSpeed;
+            playerStats.OnMightChanged += UpdateMight;
+            playerStats.OnProjectileSpeedChanged += UpdateProjectileSpeed;
+            playerStats.OnMagnetChanged += UpdateMagnet;
+            playerStats.OnExperienceChanged += UpdateExpBar;
+            playerStats.OnLevelChanged += UpdateLevel;
+        }
+    }
+
+    void OnDisable()
+    {
+        if (playerStats)
+        {
+            playerStats.OnHealthChanged -= UpdateHealth;
+            playerStats.OnRecoveryChanged -= UpdateRecovery;
+            playerStats.OnMoveSpeedChanged -= UpdateMoveSpeed;
+            playerStats.OnMightChanged -= UpdateMight;
+            playerStats.OnProjectileSpeedChanged -= UpdateProjectileSpeed;
+            playerStats.OnMagnetChanged -= UpdateMagnet;
+            playerStats.OnExperienceChanged -= UpdateExpBar;
+            playerStats.OnLevelChanged -= UpdateLevel;
+        }
+    }
+
     public void UpdateHealth(float current, float max)
     {
         if (currentHealthDisplay) currentHealthDisplay.text = $"HP: {current}";

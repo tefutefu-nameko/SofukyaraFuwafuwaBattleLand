@@ -18,7 +18,18 @@ public class PlayerStats : MonoBehaviour
     [SerializeField] GameStateService gameStateService;
     [SerializeField] UIService uiService;
     [SerializeField] TimeService timeService;
-    [SerializeField] PlayerStatsUI statsUI;
+
+
+    // Events for UI and other listeners
+    public event Action<float, float> OnHealthChanged;
+    public event Action<float> OnRecoveryChanged;
+    public event Action<float> OnMoveSpeedChanged;
+    public event Action<float> OnMightChanged;
+    public event Action<float> OnProjectileSpeedChanged;
+    public event Action<float> OnMagnetChanged;
+    public event Action<int, int> OnExperienceChanged;
+    public event Action<int> OnLevelChanged;
+
 
     public float CurrentHealth
     {
@@ -29,8 +40,8 @@ public class PlayerStats : MonoBehaviour
             if (health != value)
             {
                 health = value;
-                statsUI?.UpdateHealth(health, actualStats.maxHealth);
 
+                OnHealthChanged?.Invoke(health, actualStats.maxHealth);
             }
         }
     }
@@ -47,7 +58,7 @@ public class PlayerStats : MonoBehaviour
             if (actualStats.maxHealth != value)
             {
                 actualStats.maxHealth = value;
-                statsUI?.UpdateHealth(health, actualStats.maxHealth);
+                OnHealthChanged?.Invoke(health, actualStats.maxHealth);
                 //Update the real time value of the stat
                 //Add any additional logic here that needs to be executed when the value changes
             }
@@ -69,7 +80,8 @@ public class PlayerStats : MonoBehaviour
             if (actualStats.recovery != value)
             {
                 actualStats.recovery = value;
-                statsUI?.UpdateRecovery(actualStats.recovery);
+
+                OnRecoveryChanged?.Invoke(actualStats.recovery);
             }
         }
     }
@@ -88,7 +100,8 @@ public class PlayerStats : MonoBehaviour
             if (actualStats.moveSpeed != value)
             {
                 actualStats.moveSpeed = value;
-                statsUI?.UpdateMoveSpeed(actualStats.moveSpeed);
+
+                OnMoveSpeedChanged?.Invoke(actualStats.moveSpeed);
             }
         }
     }
@@ -107,7 +120,8 @@ public class PlayerStats : MonoBehaviour
             if (actualStats.might != value)
             {
                 actualStats.might = value;
-                statsUI?.UpdateMight(actualStats.might);
+
+                OnMightChanged?.Invoke(actualStats.might);
             }
         }
     }
@@ -126,7 +140,8 @@ public class PlayerStats : MonoBehaviour
             if (actualStats.speed != value)
             {
                 actualStats.speed = value;
-                statsUI?.UpdateProjectileSpeed(actualStats.speed);
+
+                OnProjectileSpeedChanged?.Invoke(actualStats.speed);
             }
         }
     }
@@ -145,7 +160,8 @@ public class PlayerStats : MonoBehaviour
             if (actualStats.magnet != value)
             {
                 actualStats.magnet = value;
-                statsUI?.UpdateMagnet(actualStats.magnet);
+
+                OnMagnetChanged?.Invoke(actualStats.magnet);
             }
         }
     }
@@ -197,7 +213,7 @@ public class PlayerStats : MonoBehaviour
         if (!gameStateService) gameStateService = FindObjectOfType<GameStateService>();
         if (!uiService) uiService = FindObjectOfType<UIService>();
         if (!timeService) timeService = FindObjectOfType<TimeService>();
-        if (!statsUI) statsUI = FindObjectOfType<PlayerStatsUI>();
+
 
 
         //Assign the variables
@@ -221,12 +237,12 @@ public class PlayerStats : MonoBehaviour
         experienceCap = levelRanges[0].experienceCapIncrease;
 
         //Set the current stats display
-        statsUI?.UpdateHealth(CurrentHealth, actualStats.maxHealth);
-        statsUI?.UpdateRecovery(CurrentRecovery);
-        statsUI?.UpdateMoveSpeed(CurrentMoveSpeed);
-        statsUI?.UpdateMight(CurrentMight);
-        statsUI?.UpdateProjectileSpeed(CurrentProjectileSpeed);
-        statsUI?.UpdateMagnet(CurrentMagnet);
+        OnHealthChanged?.Invoke(CurrentHealth, actualStats.maxHealth);
+        OnRecoveryChanged?.Invoke(CurrentRecovery);
+        OnMoveSpeedChanged?.Invoke(CurrentMoveSpeed);
+        OnMightChanged?.Invoke(CurrentMight);
+        OnProjectileSpeedChanged?.Invoke(CurrentProjectileSpeed);
+        OnMagnetChanged?.Invoke(CurrentMagnet);
 
         uiService?.AssignChosenCharacterUI(characterData);
 
@@ -304,12 +320,12 @@ public class PlayerStats : MonoBehaviour
 
     void UpdateExpBar()
     {
-        statsUI?.UpdateExpBar(experience, experienceCap);
+        OnExperienceChanged?.Invoke(experience, experienceCap);
     }
 
     void UpdateLevelText()
     {
-        statsUI?.UpdateLevel(level);
+        OnLevelChanged?.Invoke(level);
     }
 
     public void TakeDamage(float dmg)
@@ -335,7 +351,7 @@ public class PlayerStats : MonoBehaviour
 
     public void UpdateHealthBar()
     {
-        statsUI?.UpdateHealth(CurrentHealth, actualStats.maxHealth);
+        OnHealthChanged?.Invoke(CurrentHealth, actualStats.maxHealth);
     }
 
     public void Kill()
