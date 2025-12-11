@@ -32,7 +32,7 @@ public class WhipWeapon : ProjectileWeapon
         // Otherwise, calculate the angle and offset of our spawned projectile.
         // Then, if <currentSpawnCount> is even (i.e. more than 1 projectile),
         // we flip the direction of the spawn.
-        float spawnDir = Mathf.Sign(movement.lastMovedVector.x) * (currentSpawnCount % 2 != 0 ? -1 : 1);
+        float spawnDir = Mathf.Sign(movement.mouseDir.x) * (currentSpawnCount % 2 != 0 ? -1 : 1);
         Vector2 spawnOffset = new Vector2(
             spawnDir * Random.Range(currentStats.spawnVariance.xMin, currentStats.spawnVariance.xMax),
             currentSpawnYOffset
