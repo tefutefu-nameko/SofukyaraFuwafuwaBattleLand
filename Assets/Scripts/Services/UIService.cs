@@ -12,6 +12,7 @@ public class UIService : ManagerBase, IUIService
     [SerializeField] GameObject pauseScreen;
     [SerializeField] GameObject resultsScreen;
     [SerializeField] GameObject levelUpScreen;
+    [SerializeField] GameObject gameOverScreen;
 
     [Header("Results Screen Displays")]
     [SerializeField] Image chosenCharacterImage;
@@ -21,6 +22,14 @@ public class UIService : ManagerBase, IUIService
     [SerializeField] List<Image> chosenWeaponsUI = new List<Image>(6);
     [SerializeField] List<Image> chosenPassiveItemsUI = new List<Image>(6);
 
+    [Header("GameOver Screen Displays")]
+    [SerializeField] Image gameOverChosenCharacterImage;
+    [SerializeField] TMP_Text gameOverChosenCharacterName;
+    [SerializeField] TMP_Text gameOverLevelReachedDisplay;
+    [SerializeField] TMP_Text gameOverTimeSurvivedDisplay;
+    [SerializeField] List<Image> gameOverChosenWeaponsUI = new List<Image>(6);
+    [SerializeField] List<Image> gameOverChosenPassiveItemsUI = new List<Image>(6);
+
     [Header("Stopwatch")]
     [SerializeField] TMP_Text stopwatchDisplay;
 
@@ -29,6 +38,7 @@ public class UIService : ManagerBase, IUIService
         if (pauseScreen) pauseScreen.SetActive(false);
         if (resultsScreen) resultsScreen.SetActive(false);
         if (levelUpScreen) levelUpScreen.SetActive(false);
+        if (gameOverScreen) gameOverScreen.SetActive(false);
     }
 
     public void ShowPause()
@@ -56,6 +66,11 @@ public class UIService : ManagerBase, IUIService
         if (resultsScreen) resultsScreen.SetActive(true);
     }
 
+    public void ShowGameOver()
+    {
+        if (gameOverScreen) gameOverScreen.SetActive(true);
+    }
+
     public void SetStopwatchText(string text)
     {
         if (stopwatchDisplay) stopwatchDisplay.text = text;
@@ -64,6 +79,7 @@ public class UIService : ManagerBase, IUIService
     public void SetTimeSurvivedText(string text)
     {
         if (timeSurvivedDisplay) timeSurvivedDisplay.text = text;
+        if (gameOverTimeSurvivedDisplay) gameOverTimeSurvivedDisplay.text = text;
     }
 
     public void AssignChosenCharacterUI(CharacterData chosenCharacterData)
@@ -71,11 +87,16 @@ public class UIService : ManagerBase, IUIService
         if (!chosenCharacterData) return;
         if (chosenCharacterImage) chosenCharacterImage.sprite = chosenCharacterData.Icon;
         if (chosenCharacterName) chosenCharacterName.text = chosenCharacterData.Name;
+
+        //GameOver
+        if (gameOverChosenCharacterImage) gameOverChosenCharacterImage.sprite = chosenCharacterData.Icon;
+        if (gameOverChosenCharacterName) gameOverChosenCharacterName.text = chosenCharacterData.Name;
     }
 
     public void AssignLevelReachedUI(int levelReachedData)
     {
         if (levelReachedDisplay) levelReachedDisplay.text = levelReachedData.ToString();
+        if (gameOverLevelReachedDisplay) gameOverLevelReachedDisplay.text = levelReachedData.ToString();
     }
 
     public void AssignChosenWeaponsAndPassiveItemsUI(List<PlayerInventory.Slot> chosenWeaponsData, List<PlayerInventory.Slot> chosenPassiveItemsData)
@@ -110,6 +131,39 @@ public class UIService : ManagerBase, IUIService
             else
             {
                 chosenPassiveItemsUI[i].enabled = false;
+            }
+        }
+
+        // GameOver
+        if (chosenWeaponsData.Count != gameOverChosenWeaponsUI.Count || chosenPassiveItemsData.Count != gameOverChosenPassiveItemsUI.Count)
+        {
+            Debug.LogError("Chosen weapons and passive items data lists have different lengths");
+            return;
+        }
+
+        for (int i = 0; i < gameOverChosenWeaponsUI.Count; i++)
+        {
+            if (chosenWeaponsData[i].image.sprite)
+            {
+                gameOverChosenWeaponsUI[i].enabled = true;
+                gameOverChosenWeaponsUI[i].sprite = chosenWeaponsData[i].image.sprite;
+            }
+            else
+            {
+                gameOverChosenWeaponsUI[i].enabled = false;
+            }
+        }
+
+        for (int i = 0; i < gameOverChosenPassiveItemsUI.Count; i++)
+        {
+            if (chosenPassiveItemsData[i].image.sprite)
+            {
+                gameOverChosenPassiveItemsUI[i].enabled = true;
+                gameOverChosenPassiveItemsUI[i].sprite = chosenPassiveItemsData[i].image.sprite;
+            }
+            else
+            {
+                gameOverChosenPassiveItemsUI[i].enabled = false;
             }
         }
     }

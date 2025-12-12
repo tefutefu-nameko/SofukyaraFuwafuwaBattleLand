@@ -10,6 +10,7 @@ public interface IUIService
     void ShowLevelUp();
     void HideLevelUp();
     void ShowResults();
+    void ShowGameOver();
     void HideAll();
 
     void SetStopwatchText(string text);

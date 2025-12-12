@@ -7,6 +7,7 @@ using TMPro;
 public class PlayerStats : MonoBehaviour
 {
     CharacterData characterData;
+    public CharacterData Data => characterData;
     public CharacterData.Stats baseStats;
     [SerializeField] CharacterData.Stats actualStats;
 

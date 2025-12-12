@@ -8,6 +8,8 @@ public class GameStateService : ManagerBase, IGameStateService
 {
     [SerializeField] UIService uiService;
     [SerializeField] TimeService timeService;
+    [SerializeField] PlayerStats PlayerStats;
+    [SerializeField] RankingManager rankingManager;
 
     public GameState CurrentState { get; private set; } = GameState.Gameplay;
     public bool IsGameOver { get; private set; }
@@ -36,7 +38,18 @@ public class GameStateService : ManagerBase, IGameStateService
                 {
                     IsGameOver = true;
                     Time.timeScale = 0f;
-                    uiService?.ShowResults();
+                    if(PlayerStats.CurrentHealth <= 0)
+                    {
+                        uiService?.ShowGameOver();
+                    }
+                    else
+                    {
+                        string charName = PlayerStats.Data.Name;
+                        Debug.Log(charName);
+                        rankingManager?.AddScore(charName, timeService.ElapsedSeconds);
+                        uiService?.ShowResults();
+                    }
+                        
                 }
                 break;
             case GameState.LevelUp:
