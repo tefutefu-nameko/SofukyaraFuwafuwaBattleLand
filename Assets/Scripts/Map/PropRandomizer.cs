@@ -10,11 +10,13 @@ public class PropRandomizer : MonoBehaviour
 
     void Start()
     {
-        SpawnProps();
+        // Spawning disabled as per map specification change (finite stage -> no random props)
+        // SpawnProps();
     }
 
     void SpawnProps()
     {
+        /*
         //Spawn a random prop at every spawn point
         foreach (GameObject sp in propSpawnPoints)
         {
@@ -22,5 +24,6 @@ public class PropRandomizer : MonoBehaviour
             GameObject prop = Instantiate(propPrefabs[rand], sp.transform.position, Quaternion.identity);
             prop.transform.parent = sp.transform;  //Move spawned object into map
         }
+        */
     }
 }

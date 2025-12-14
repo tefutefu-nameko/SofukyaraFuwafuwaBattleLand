@@ -111,7 +111,10 @@ public class EnemyStats : EnemyBase
     private void OnDestroy()
     {
         EnemySpawner es = FindObjectOfType<EnemySpawner>();
-        es.OnEnemyKilled();
+        if (es != null)
+        {
+            es.OnEnemyKilled();
+        }
     }
     void ReturnEnemy()
     {

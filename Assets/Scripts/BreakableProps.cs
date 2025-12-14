@@ -6,6 +6,13 @@ public class BreakableProps : MonoBehaviour
 {
     public float health;
 
+    void Start()
+    {
+        // Enforce "No Props" rule for finite map
+        // If this script is attached, it's likely a rock or crate.
+        Destroy(gameObject);
+    }
+
     public void TakeDamage(float dmg)
     {
         health -= dmg;

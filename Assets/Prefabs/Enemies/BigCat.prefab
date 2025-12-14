@@ -172,6 +172,14 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4558879083123397789, guid: ad61e37f8b1811f41aa2c1c13795d3b2, type: 3}
+      propertyPath: m_Radius
+      value: 0.23835601
+      objectReference: {fileID: 0}
+    - target: {fileID: 4558879083123397789, guid: ad61e37f8b1811f41aa2c1c13795d3b2, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.005163014
+      objectReference: {fileID: 0}
     - target: {fileID: 5117827238469107441, guid: ad61e37f8b1811f41aa2c1c13795d3b2, type: 3}
       propertyPath: m_Name
       value: BigCat
@@ -208,7 +216,22 @@ PrefabInstance:
       propertyPath: enemyData
       value: 
       objectReference: {fileID: 11400000, guid: b9a6d2355dbfa104088f7b2a189e3afd, type: 2}
-    m_RemovedComponents: []
+    - target: {fileID: 8586943148600826622, guid: ad61e37f8b1811f41aa2c1c13795d3b2, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8586943148600826622, guid: ad61e37f8b1811f41aa2c1c13795d3b2, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.53
+      objectReference: {fileID: 0}
+    - target: {fileID: 8586943148600826622, guid: ad61e37f8b1811f41aa2c1c13795d3b2, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 0.58
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 5889362499456557323, guid: ad61e37f8b1811f41aa2c1c13795d3b2, type: 3}
+    - {fileID: 8586943148600826622, guid: ad61e37f8b1811f41aa2c1c13795d3b2, type: 3}
+    - {fileID: -1194927865469466707, guid: ad61e37f8b1811f41aa2c1c13795d3b2, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []

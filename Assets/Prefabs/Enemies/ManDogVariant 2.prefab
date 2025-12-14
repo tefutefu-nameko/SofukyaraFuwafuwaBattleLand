@@ -184,6 +184,14 @@ PrefabInstance:
       propertyPath: drops.Array.data[0].itemPrefab
       value: 
       objectReference: {fileID: 1218668208091956480, guid: 3eb121d3d7bc5d74b810b60bc443bb79, type: 3}
+    - target: {fileID: 4558879083123397789, guid: ad61e37f8b1811f41aa2c1c13795d3b2, type: 3}
+      propertyPath: m_Radius
+      value: 0.23532848
+      objectReference: {fileID: 0}
+    - target: {fileID: 4558879083123397789, guid: ad61e37f8b1811f41aa2c1c13795d3b2, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.030068835
+      objectReference: {fileID: 0}
     - target: {fileID: 5117827238469107441, guid: ad61e37f8b1811f41aa2c1c13795d3b2, type: 3}
       propertyPath: m_Name
       value: ManDogVariant 2
@@ -212,7 +220,18 @@ PrefabInstance:
       propertyPath: enemyData
       value: 
       objectReference: {fileID: 11400000, guid: 4a6db69b82200b740b100656a8c5f058, type: 2}
-    m_RemovedComponents: []
+    - target: {fileID: 8586943148600826622, guid: ad61e37f8b1811f41aa2c1c13795d3b2, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.64
+      objectReference: {fileID: 0}
+    - target: {fileID: 8586943148600826622, guid: ad61e37f8b1811f41aa2c1c13795d3b2, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 0.56
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 8586943148600826622, guid: ad61e37f8b1811f41aa2c1c13795d3b2, type: 3}
+    - {fileID: -1194927865469466707, guid: ad61e37f8b1811f41aa2c1c13795d3b2, type: 3}
+    - {fileID: 5889362499456557323, guid: ad61e37f8b1811f41aa2c1c13795d3b2, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []

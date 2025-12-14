@@ -27,6 +27,16 @@ public class PlayerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         gameStateService = FindObjectOfType<GameStateService>();
         lastMovedVector = new Vector2(1, 0f); //If we don't do this and game starts up and don't move, the projectile weapon will have no momentum
+        
+        // Remove Friction from Player so they slide along walls
+        PhysicsMaterial2D slipperyMaterial = new PhysicsMaterial2D("PlayerSlippery");
+        slipperyMaterial.friction = 0f;
+        slipperyMaterial.bounciness = 0f;
+        rb.sharedMaterial = slipperyMaterial;
+
+        // Also apply to any attached Colliders (like CircleCollider2D)
+        Collider2D[] cols = GetComponents<Collider2D>();
+        foreach(var c in cols) c.sharedMaterial = slipperyMaterial;
     }
 
     void Update()
