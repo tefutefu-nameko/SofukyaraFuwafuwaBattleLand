@@ -34,7 +34,7 @@ public abstract class Weapon : Item
             result.projectilePrefab = s2.projectilePrefab ?? s1.projectilePrefab;
             result.auraPrefab = s2.auraPrefab ?? s1.auraPrefab;
             result.hitEffect = s2.hitEffect == null ? s1.hitEffect : s2.hitEffect;
-            result.spawnVariance = s2.spawnVariance;
+            result.spawnVariance = s2.spawnVariance != Rect.zero ? s2.spawnVariance : s1.spawnVariance;
             result.lifespan = s1.lifespan + s2.lifespan;
             result.damage = s1.damage + s2.damage;
             result.damageVariance = s1.damageVariance + s2.damageVariance;
