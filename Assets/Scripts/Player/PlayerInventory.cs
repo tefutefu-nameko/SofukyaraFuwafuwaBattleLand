@@ -80,9 +80,8 @@ public class PlayerInventory : MonoBehaviour
     {
         foreach (Slot s in passiveSlots)
         {
-            if (s.IsEmpty()) continue;
             Passive p = s.item as Passive;
-            if (p && p.data == type)
+            if (p.data == type)
                 return p;
         }
         return null;
@@ -189,8 +188,8 @@ public class PlayerInventory : MonoBehaviour
             weaponSlots[slotNum].Assign(spawnedWeapon);
 
             // Close the level up UI if it is on.
-        if (gameStateService != null && gameStateService.IsChoosingUpgrade)
-            gameStateService.EndLevelUp();
+            if (gameStateService != null && gameStateService.IsChoosingUpgrade)
+                gameStateService.EndLevelUp();
 
             return slotNum;
         }
@@ -300,23 +299,6 @@ public class PlayerInventory : MonoBehaviour
     // Determines what upgrade options should appear.
     void ApplyUpgradeOptions()
     {
-        // Check for Auto evolutions from existing weapons
-        foreach (Slot s in weaponSlots)
-        {
-            if (s.IsEmpty()) continue;
-            Weapon w = s.item as Weapon;
-            if (w.data.evolutionData == null) continue;
-
-            foreach (ItemData.Evolution e in w.data.evolutionData)
-            {
-                if (e.condition == ItemData.Evolution.Condition.auto)
-                {
-                    // Attempt to register the evolution if conditions are met
-                    w.AttemptEvolution(e);
-                }
-            }
-        }
-
         // Make a duplicate of the available weapon / passive upgrade lists
         // so we can iterate through them in the function.
         List<WeaponData> availableWeaponUpgrades = new List<WeaponData>(availableWeapons);
@@ -335,25 +317,20 @@ public class PlayerInventory : MonoBehaviour
             int upgradeType;
             if (evolutionWeaponUpgrades.Count != 0)
             {
-                Debug.Log($"[Upgrade Debug] Evolution weapons found: {evolutionWeaponUpgrades.Count}. Choosing Evolution.");
                 upgradeType = 3;
+            }
+            else if (availableWeaponUpgrades.Count == 0)
+            {
+                upgradeType = 2;
+            }
+            else if (availablePassiveItemUpgrades.Count == 0)
+            {
+                upgradeType = 1;
             }
             else
             {
-                Debug.Log("[Upgrade Debug] No evolution weapons found.");
-                if (availableWeaponUpgrades.Count == 0)
-                {
-                    upgradeType = 2;
-                }
-                else if (availablePassiveItemUpgrades.Count == 0)
-                {
-                    upgradeType = 1;
-                }
-                else
-                {
-                    // Random generates a number between 1 and 2.
-                    upgradeType = UnityEngine.Random.Range(1, 3);
-                }
+                // Random generates a number between 1 and 2.
+                upgradeType = UnityEngine.Random.Range(1, 3);
             }
 
             // Generates an active weapon upgrade.
@@ -393,9 +370,10 @@ public class PlayerInventory : MonoBehaviour
                             upgradeOption.upgradeDescriptionDisplay.text = nextLevel.description;
                             upgradeOption.upgradeNameDisplay.text = nextLevel.name;
                             upgradeOption.upgradeIcon.sprite = chosenWeaponUpgrade.icon;
-                            if (w.currentLevel == w.maxLevel - 1) {
+                            if (w.currentLevel == w.maxLevel - 1)
+                            {
                                 Debug.LogWarning(string.Format("{0}は進化できるよ", chosenWeaponUpgrade.name));
-                                upgradeOption.upgradeButton.onClick.AddListener(() =>  w.DoLevelUp());
+                                upgradeOption.upgradeButton.onClick.AddListener(() => w.DoLevelUp());
                                 upgradeOption.upgradeButton.onClick.AddListener(() => availableWeapons.Remove(chosenWeaponUpgrade));
                             }
                             else Debug.LogWarning(string.Format("レベル{0}だと{1}は進化できないよ", w.currentLevel, chosenWeaponUpgrade.name));
@@ -480,7 +458,7 @@ public class PlayerInventory : MonoBehaviour
                 WeaponData consumeWeapon = null;
                 for (int i = 0; i < evolutionWeaponUpgrades.Count; i++)
                 {
-                    if (evolutionWeaponUpgrades[i].Equals(chosenWeaponUpgrade)) 
+                    if (evolutionWeaponUpgrades[i].Equals(chosenWeaponUpgrade))
                     {
                         num = i;
                     }
@@ -581,25 +559,25 @@ public class PlayerInventory : MonoBehaviour
     // 条件を満たした進化する武器を進化武器専用のリストに追加(Item.csから)
     // 消費するアイテム(現在は武器限定)を消費武器のリストに格納
     // リストの名前は異なるがi番目に格納しているのは共通である
-    public void AddEvolutionWeapon(ItemData data ,WeaponData consumeWeapon)
+    public void AddEvolutionWeapon(ItemData data, WeaponData consumeWeapon)
     {
-        Debug.Log($"[Upgrade Debug] Attempting to add evolution weapon candidate: {data.name}");
         // 進化条件を常に満たしているとき、同じ武器を複数回リストに入れることを防ぐ
         bool judge = true;
-        for(int i = 0; i < evolutionWeaponsCount.Count; i++)
+        for (int i = 0; i < evolutionWeaponsCount.Count; i++)
         {
-            if (evolutionWeaponsCount[i].Equals(data)){
+            if (evolutionWeaponsCount[i].Equals(data))
+            {
                 judge = false;
                 break;
             }
         }
         if (judge)
         {
-            Debug.Log($"[Upgrade Debug] Added {data.name} to evolution list.");
             evolutionWeapons.Add(data as WeaponData);
             evolutionWeaponsCount.Add(data);
             consumeWeapons.Add(consumeWeapon);
         }
+
     }
 
 }
