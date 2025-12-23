@@ -61,4 +61,19 @@ public class EnemyMovement : MonoBehaviour
         knockbackVelocity = velocity;
         knockbackDuration = duration;
     }
+
+    // Temporarily stops the enemy's movement.
+    public void ApplyStun(float duration)
+    {
+        // Cancel any existing knockback if necessary, or just override duration
+        // For simplicity, we can use knockbackDuration with zero velocity to simulate a stun
+        // provided the knockback logic handles zero velocity correctly.
+        // Current logic: rb.MovePosition(rb.position + knockbackVelocity * Time.fixedDeltaTime);
+        // If velocity is zero, it stays in place.
+        
+        if (knockbackDuration > 0) return; // Don't override existing stun/knockback for now? Or should we extend?
+        
+        knockbackVelocity = Vector2.zero;
+        knockbackDuration = duration;
+    }
 }

@@ -131,7 +131,7 @@ public abstract class Weapon : Item
     {
         if (CanAttack())
         {
-            currentCooldown += currentStats.cooldown;
+            currentCooldown += currentStats.cooldown * owner.CurrentCooldown;
             return true;
         }
         return false;

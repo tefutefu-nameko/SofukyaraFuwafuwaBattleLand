@@ -161,8 +161,25 @@ public class PlayerStats : MonoBehaviour
             if (actualStats.magnet != value)
             {
                 actualStats.magnet = value;
-
                 OnMagnetChanged?.Invoke(actualStats.magnet);
+            }
+        }
+    }
+
+    public float CurrentCooldown
+    {
+        get { return Cooldown; }
+        set { Cooldown = value; }
+    }
+    public float Cooldown
+    {
+        get { return actualStats.cooldown; }
+        set
+        {
+            //Check if the value has changed
+            if (actualStats.cooldown != value)
+            {
+                actualStats.cooldown = value;
             }
         }
     }

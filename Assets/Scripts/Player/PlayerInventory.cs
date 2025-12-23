@@ -188,8 +188,8 @@ public class PlayerInventory : MonoBehaviour
             weaponSlots[slotNum].Assign(spawnedWeapon);
 
             // Close the level up UI if it is on.
-        if (gameStateService != null && gameStateService.IsChoosingUpgrade)
-            gameStateService.EndLevelUp();
+            if (gameStateService != null && gameStateService.IsChoosingUpgrade)
+                gameStateService.EndLevelUp();
 
             return slotNum;
         }
@@ -370,9 +370,10 @@ public class PlayerInventory : MonoBehaviour
                             upgradeOption.upgradeDescriptionDisplay.text = nextLevel.description;
                             upgradeOption.upgradeNameDisplay.text = nextLevel.name;
                             upgradeOption.upgradeIcon.sprite = chosenWeaponUpgrade.icon;
-                            if (w.currentLevel == w.maxLevel - 1) {
+                            if (w.currentLevel == w.maxLevel - 1)
+                            {
                                 Debug.LogWarning(string.Format("{0}は進化できるよ", chosenWeaponUpgrade.name));
-                                upgradeOption.upgradeButton.onClick.AddListener(() =>  w.DoLevelUp());
+                                upgradeOption.upgradeButton.onClick.AddListener(() => w.DoLevelUp());
                                 upgradeOption.upgradeButton.onClick.AddListener(() => availableWeapons.Remove(chosenWeaponUpgrade));
                             }
                             else Debug.LogWarning(string.Format("レベル{0}だと{1}は進化できないよ", w.currentLevel, chosenWeaponUpgrade.name));
@@ -457,7 +458,7 @@ public class PlayerInventory : MonoBehaviour
                 WeaponData consumeWeapon = null;
                 for (int i = 0; i < evolutionWeaponUpgrades.Count; i++)
                 {
-                    if (evolutionWeaponUpgrades[i].Equals(chosenWeaponUpgrade)) 
+                    if (evolutionWeaponUpgrades[i].Equals(chosenWeaponUpgrade))
                     {
                         num = i;
                     }
@@ -558,13 +559,14 @@ public class PlayerInventory : MonoBehaviour
     // 条件を満たした進化する武器を進化武器専用のリストに追加(Item.csから)
     // 消費するアイテム(現在は武器限定)を消費武器のリストに格納
     // リストの名前は異なるがi番目に格納しているのは共通である
-    public void AddEvolutionWeapon(ItemData data ,WeaponData consumeWeapon)
+    public void AddEvolutionWeapon(ItemData data, WeaponData consumeWeapon)
     {
         // 進化条件を常に満たしているとき、同じ武器を複数回リストに入れることを防ぐ
         bool judge = true;
-        for(int i = 0; i < evolutionWeaponsCount.Count; i++)
+        for (int i = 0; i < evolutionWeaponsCount.Count; i++)
         {
-            if (evolutionWeaponsCount[i].Equals(data)){
+            if (evolutionWeaponsCount[i].Equals(data))
+            {
                 judge = false;
                 break;
             }

@@ -67,6 +67,12 @@ public class EnemyStats : EnemyBase
         }
     }
 
+    // Applies a stun effect to the enemy.
+    public void ApplyStun(float duration)
+    {
+        if (movement) movement.ApplyStun(duration);
+    }
+
     // This is a Coroutine function that makes the enemy flash when taking damage.
     public void Kill()
     {
@@ -119,6 +125,7 @@ public class EnemyStats : EnemyBase
     void ReturnEnemy()
     {
         EnemySpawner es = FindObjectOfType<EnemySpawner>();
+        if (es == null || player == null) return;
         transform.position = player.position + es.relativeSpawnPoints[Random.Range(0, es.relativeSpawnPoints.Count)].position;
     }
 
