@@ -21,9 +21,12 @@ public class TreasureChest : MonoBehaviour
 
     public void OpenTreasureChest(PlayerInventory inventory, bool isHigherTier)
     {
+        bool evolutionFound = false;
+
         // Loop through every weapon to check whether it can evolve.
         foreach (PlayerInventory.Slot s in inventory.weaponSlots)
         {
+            if (s.IsEmpty()) continue;
 
             Weapon w = s.item as Weapon;
             if (w.data.evolutionData == null) continue; // Ignore weapon if it cannot evolve.
@@ -35,10 +38,21 @@ public class TreasureChest : MonoBehaviour
                 if (e.condition == ItemData.Evolution.Condition.treasureChest)
                 {
                     bool attempt = w.AttemptEvolution(e, 0);
-                    if (attempt) return; // If evolution suceeds, stop.
+                    if (attempt)
+                    {
+                        evolutionFound = true;
+                        break;
+                    }
                 }
-
             }
+            if (evolutionFound) break;
         }
+
+        // Trigger the Level Up / Reward UI
+        // We act as if a level up occurred, which will check the evolutionWeapons list we just populated.
+        GameStateService gss = FindObjectOfType<GameStateService>();
+        
+        if (gss) gss.StartLevelUp();
+        inventory.RemoveAndApplyUpgrades();
     }
 }

@@ -19539,15 +19539,12 @@ MonoBehaviour:
   - item: {fileID: 0}
     image: {fileID: 1474609996}
   availableWeapons:
-  - {fileID: 11400000, guid: ea9dff3d56046de44944672e3dd6ea69, type: 2}
-  - {fileID: 11400000, guid: 7f05e472731195146abfebf8f3d06c19, type: 2}
-  - {fileID: 11400000, guid: 5628adefd34089f4aa3749bac0fad1a5, type: 2}
-  - {fileID: 11400000, guid: 2130005ed70b50b4ea3e01cd1cd799a7, type: 2}
   - {fileID: 11400000, guid: 5723004e832327249bd1ad48893bf293, type: 2}
   availablePassives:
   - {fileID: 11400000, guid: 38286b6815cb8204eb06a7447512f40f, type: 2}
   - {fileID: 11400000, guid: ccad914ae7bfeb44499ae47b02e91181, type: 2}
   - {fileID: 11400000, guid: 5c335c66d007692458b500fd60f3c1e6, type: 2}
+  - {fileID: 11400000, guid: 26962e817b6044f478202898907c35b3, type: 2}
   upgradeUIOptions:
   - upgradeNameDisplay: {fileID: 361668638}
     upgradeDescriptionDisplay: {fileID: 1317576714}

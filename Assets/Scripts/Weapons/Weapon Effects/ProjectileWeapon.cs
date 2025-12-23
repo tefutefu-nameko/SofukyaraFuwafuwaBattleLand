@@ -54,7 +54,7 @@ public class ProjectileWeapon : Weapon
 
         // Reset the cooldown only if this attack was triggered by cooldown.
         if (currentCooldown <= 0)
-            currentCooldown += currentStats.cooldown;
+            currentCooldown += currentStats.cooldown * owner.CurrentCooldown;
 
         attackCount--;
 

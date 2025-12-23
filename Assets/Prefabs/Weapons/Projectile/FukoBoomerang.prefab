@@ -12,10 +12,10 @@ GameObject:
   - component: {fileID: -1716278591662073302}
   - component: {fileID: -4481535337695800338}
   - component: {fileID: 954075293769992671}
-  - component: {fileID: 4453084077871648177}
   - component: {fileID: -1536417691503115879}
+  - component: {fileID: -3256529825908621614}
   m_Layer: 0
-  m_Name: Axe Projectile
+  m_Name: FukoBoomerang
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -30,11 +30,11 @@ Transform:
   m_GameObject: {fileID: 2705243838911103699}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.2, y: 1.2, z: 1.2}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &-1716278591662073302
 SpriteRenderer:
@@ -77,7 +77,7 @@ SpriteRenderer:
   m_SortingLayerID: 170300551
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 9730365a7e47bd9438d1d200483d4f42, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 44c2f22e480824f67ad210f98d8c96cb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -120,9 +120,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.070040226}
   serializedVersion: 2
-  m_Radius: 0.4
+  m_Radius: 11.529999
 --- !u!50 &954075293769992671
 Rigidbody2D:
   serializedVersion: 4
@@ -131,7 +131,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2705243838911103699}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -150,23 +150,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 0
---- !u!114 &4453084077871648177
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2705243838911103699}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5158cc01517a7764bae060d07f6dd542, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  owner: {fileID: 0}
-  weapon: {fileID: 0}
-  damageSource: 0
-  hasAutoAim: 0
-  rotationSpeed: {x: 0, y: 0, z: -180}
 --- !u!82 &-1536417691503115879
 AudioSource:
   m_ObjectHideFlags: 0
@@ -187,7 +170,7 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
+  MinDistance: 1.151443
   MaxDistance: 500
   Pan2D: 0
   rolloffMode: 0
@@ -263,3 +246,25 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &-3256529825908621614
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2705243838911103699}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61150a1bbec3347b59cf446acb5e5e3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  owner: {fileID: 0}
+  weapon: {fileID: 0}
+  damageSource: 0
+  hasAutoAim: 0
+  rotationSpeed: {x: 0, y: 0, z: 0}
+  maxDistance: 10
+  returnSpeedMultiplier: 1.5
+  acceleration: 5
+  stunChance: 0.2
+  stunDuration: 1

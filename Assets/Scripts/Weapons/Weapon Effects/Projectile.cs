@@ -31,10 +31,7 @@ public class Projectile : WeaponEffect
 
         // Prevent the area from being 0, as it hides the projectile.
         float area = stats.area == 0 ? 1 : stats.area;
-        transform.localScale = new Vector3(
-            area * Mathf.Sign(transform.localScale.x),
-            area * Mathf.Sign(transform.localScale.y), 1
-        );
+        transform.localScale *= area;
 
         // Set how much piercing this object has.
         piercing = stats.piercing;

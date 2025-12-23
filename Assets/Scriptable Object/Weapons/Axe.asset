@@ -14,7 +14,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 21300000, guid: 9730365a7e47bd9438d1d200483d4f42, type: 3}
   maxLevel: 3
-  evolutionData: []
+  evolutionData:
+  - name: "\u30D5\u30B3\u69D8\u306E\u304A\u672D"
+    condition: 0
+    consumes: 2
+    evolutionLevel: 3
+    catalysts:
+    - itemType: {fileID: 11400000, guid: 26962e817b6044f478202898907c35b3, type: 2}
+      level: 0
+    outcome:
+      itemType: {fileID: 11400000, guid: 54f4575ef5d53473ca2eeaa2c17de470, type: 2}
+      level: 1
   behaviour: AxeWeapon
   baseStats:
     name: "\u30D5\u30B3\u69D8\u306E\u304A\u672D"
