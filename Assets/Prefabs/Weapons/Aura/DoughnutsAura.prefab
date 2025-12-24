@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 8533191801322162583}
   - component: {fileID: 8580726180033236471}
   m_Layer: 0
-  m_Name: Garlic Aura
+  m_Name: DoughnutsAura
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -91,15 +91,15 @@ SpriteRenderer:
   m_SortingLayerID: 170300551
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 3fbfa4f7168e3c54faa5044d26af95de, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1.6, y: 1.6}
+  m_Size: {x: 6.64, y: 6.57}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!58 &7285838518162001534
@@ -327,7 +327,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 0.78039217, g: 1, b: 0.9928307, a: 0.49803922}
+      maxColor: {r: 1, g: 1, b: 1, a: 0.49803922}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -1591,7 +1591,7 @@ ParticleSystem:
     uvChannelMask: -1
     rowMode: 1
     sprites:
-    - sprite: {fileID: 21300000, guid: 3fbfa4f7168e3c54faa5044d26af95de, type: 3}
+    - sprite: {fileID: -1491641593, guid: 562c7b68bd65b43a5a9f62a8d2fea5d7, type: 3}
     flipU: 0
     flipV: 0
   VelocityModule:
