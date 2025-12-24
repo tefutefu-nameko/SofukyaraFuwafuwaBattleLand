@@ -12,15 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a607af73fb0c42c4c845f92a36d44c94, type: 3}
   m_Name: Soul Eater
   m_EditorClassIdentifier: 
-  icon: {fileID: 1884800638, guid: 0090d377f59c1a04db43618221a27856, type: 3}
+  icon: {fileID: -1813251769, guid: 562c7b68bd65b43a5a9f62a8d2fea5d7, type: 3}
   maxLevel: 1
   evolutionData: []
   behaviour: AuraWeapon
   baseStats:
-    name: "\u30BD\u30A6\u30EB\u30A4\u30FC\u30BF\u30FC\u306B\u9032\u5316!!"
-    description: "\u9818\u57DF\u5C55\u958B!! \u3053\u308C\u3067\u30AD\u30DF\u3082\u4E94\u6761\u609F"
+    name: "\u30C9\u30FC\u30CA\u30C3\u30C4\u796D\u308A"
+    description: "\u9818\u57DF\u5185\u306B\u30C9\u30FC\u30CA\u30C3\u30C4\u304C\u6E67\u304D\u51FA\u308B\uFF01"
     projectilePrefab: {fileID: 0}
-    auraPrefab: {fileID: -4999621459740244065, guid: c6f21d5acaa98c540b9d6093d50a1da8, type: 3}
+    auraPrefab: {fileID: 213001557278386314, guid: 447fe76ee4c6a4f8ab8e179ebb0627a3, type: 3}
     hitEffect: {fileID: 0}
     spawnVariance:
       serializedVersion: 2
